@@ -6,3 +6,6 @@
 
 # Fichiers système
 .DS_Store
+
+# Outils de synchronisation (non publiés)
+.auto-sync/
