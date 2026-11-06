@@ -206,7 +206,8 @@ p { margin: 0 0 1em; }
 .card h2, .card h3 { margin-top: 0; }
 .card-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.1rem; flex-wrap: wrap; }
 .card-head h2, .card-head h3 { margin: 0; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1rem; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 1rem; }
+.form-grid > * { min-width: 0; }
 .form-grid .full { grid-column: 1 / -1; }
 @media (max-width: 640px) { .form-grid { grid-template-columns: 1fr; } }
 label { display: block; font-weight: 700; font-size: .84rem; margin-bottom: .4rem; color: var(--ink-soft); }
@@ -364,6 +365,17 @@ td .name { font-weight: 700; color: var(--ink); }
 .att-options input:checked + span.o-absent { background: var(--bad); color: #fff; }
 .att-options input:checked + span.o-justifie { background: var(--info); color: #fff; }
 .att-options input:checked + span.o-none { background: #fff; color: var(--ink); }
+.att-note { min-width: 140px; }
+/* Appel sur téléphone : une carte par élève (nom, présence, remarque) au lieu d'un tableau à faire défiler */
+@media (max-width: 640px) {
+  .att-table thead { display: none; }
+  .att-table, .att-table tbody, .att-table tr, .att-table td { display: block; width: 100%; }
+  .att-table tr { padding: .8rem 0; border-bottom: 1px solid var(--line); }
+  .att-table td { padding: .3rem 0; border: 0; }
+  .att-table .att-options { display: flex; flex-wrap: wrap; }
+  .att-table .att-note { min-width: 0; width: 100%; }
+  .att-table td[data-label]::before { content: attr(data-label) " : "; color: var(--muted); font-size: .85rem; }
+}
 details.inline summary { cursor: pointer; color: var(--violet); font-weight: 700; font-size: .88rem; }
 details.inline[open] summary { margin-bottom: .8rem; }
 .inline-form { display: flex; gap: .5rem; flex-wrap: wrap; align-items: end; }
@@ -837,7 +849,8 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .step-pill.done { background: #e6ecff; color: var(--royal); border-color: transparent; } .step-pill.on { background: var(--royal); color: #fff; border-color: transparent; }
 .step-pill.lost.on { background: var(--bad); }
 .kind-pick { display: flex; gap: .35rem; flex-wrap: wrap; margin-bottom: .7rem; }
-.kind-pick input { position: absolute; opacity: 0; pointer-events: none; }
+.kind-pick label { position: relative; }
+.kind-pick input { position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; margin: 0; inset-inline-start: 0; top: 0; }
 .kind-pick span { display: inline-block; padding: .4em .85em; border-radius: 999px; border: 1px solid var(--line); font-size: .82rem; font-weight: 700; cursor: pointer; }
 .kind-pick input:checked + span { background: var(--royal); color: #fff; border-color: transparent; }
 .kind-pick input:focus-visible + span { outline: 3px solid #f7d77f; }

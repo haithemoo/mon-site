@@ -46,7 +46,7 @@
 </svg>زيارة الموقع</a>
         <a href="formateur-groupe.html" lang="fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Version française</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="xDe0gzosEqaeO_AcJJ6J_ckZ0sCdmd4bQgogEk0VdpM"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="Af61Gnjdh-arE25ln3y2l54NfWi7SSJMC8shHxxpySw"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>تسجيل الخروج</button></form>
       </nav>
     </div>
@@ -61,9 +61,9 @@
 <div class="card">
   <form class="toolbar" method="get"><div><label for="tg-date">تاريخ الحصّة</label><input id="tg-date" type="date" name="date" value="2026-11-03" data-autosubmit></div></form>
   
-  <form method="post"><input type="hidden" name="_csrf" value="xDe0gzosEqaeO_AcJJ6J_ckZ0sCdmd4bQgogEk0VdpM"><input type="hidden" name="action" value="attendance"><input type="hidden" name="date" value="2026-11-03">
+  <form method="post"><input type="hidden" name="_csrf" value="Af61Gnjdh-arE25ln3y2l54NfWi7SSJMC8shHxxpySw"><input type="hidden" name="action" value="attendance"><input type="hidden" name="date" value="2026-11-03">
     <div class="actions" style="margin-bottom:1rem"><button type="button" class="btn btn-light btn-sm" data-all="present">الكلّ حاضر</button><button type="button" class="btn btn-light btn-sm" data-all="">مسح الكل</button></div>
-    <div class="table-wrap"><table>
+    <div class="table-wrap"><table class="att-table">
       <thead><tr><th>المتكوّن</th><th>الحضور</th><th>ملاحظة</th><th>الغيابات</th></tr></thead>
       <tbody>
       
@@ -80,8 +80,8 @@
             
             <label><input type="radio" name="st_1" value="" ><span class="o-none">—</span></label>
             </div></td>
-          <td><input name="note_1" value="" aria-label="ملاحظة" style="min-width:140px"></td>
-          <td><span class="badge b-absent">1</span></td></tr>
+          <td><input class="att-note" name="note_1" value="" aria-label="ملاحظة" placeholder="ملاحظة"></td>
+          <td data-label="الغيابات"><span class="badge b-absent">1</span></td></tr>
       
         <tr><td><b>Bouzid Anis</b><br><span class="small muted">المعدّل <bdi dir="ltr">18.0 / 20</bdi></span></td>
           <td><div class="att-options" role="radiogroup" aria-label="Anis Bouzid">
@@ -96,8 +96,8 @@
             
             <label><input type="radio" name="st_20" value="" checked><span class="o-none">—</span></label>
             </div></td>
-          <td><input name="note_20" value="" aria-label="ملاحظة" style="min-width:140px"></td>
-          <td><span class="muted">0</span></td></tr>
+          <td><input class="att-note" name="note_20" value="" aria-label="ملاحظة" placeholder="ملاحظة"></td>
+          <td data-label="الغيابات"><span class="muted">0</span></td></tr>
       
         <tr><td><b>Khelifi Hiba</b><br><span class="small muted">المعدّل <bdi dir="ltr">13.0 / 20</bdi></span></td>
           <td><div class="att-options" role="radiogroup" aria-label="Hiba Khelifi">
@@ -112,8 +112,8 @@
             
             <label><input type="radio" name="st_8" value="" checked><span class="o-none">—</span></label>
             </div></td>
-          <td><input name="note_8" value="" aria-label="ملاحظة" style="min-width:140px"></td>
-          <td><span class="muted">0</span></td></tr>
+          <td><input class="att-note" name="note_8" value="" aria-label="ملاحظة" placeholder="ملاحظة"></td>
+          <td data-label="الغيابات"><span class="muted">0</span></td></tr>
       
       </tbody>
     </table></div>
@@ -123,7 +123,7 @@
 </div>
 
 <div class="two-col" style="margin-top:1.2rem">
-  <form method="post" class="card"><input type="hidden" name="_csrf" value="xDe0gzosEqaeO_AcJJ6J_ckZ0sCdmd4bQgogEk0VdpM"><input type="hidden" name="action" value="grades"><input type="hidden" name="date" value="2026-11-03">
+  <form method="post" class="card"><input type="hidden" name="_csrf" value="Af61Gnjdh-arE25ln3y2l54NfWi7SSJMC8shHxxpySw"><input type="hidden" name="action" value="grades"><input type="hidden" name="date" value="2026-11-03">
     <h3>إدخال الأعداد</h3>
     <div class="form-grid">
       <div><label for="tgr-title">التقييم</label><input id="tgr-title" name="title" required placeholder="مثال: اختبار تطبيقي"></div>
