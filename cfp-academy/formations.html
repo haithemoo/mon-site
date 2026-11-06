@@ -22,7 +22,7 @@
   <meta name="theme-color" content="#0b1d5c">
   <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="demo-bar">Aperçu de test · données fictives · formulaires désactivés —
+<body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
 <a href="accueil.html">Site public</a> · <a href="espace.html">Espace élève</a> · <a href="admin.html">Administration</a></div>
   <header class="site-header">
     <div class="container">
@@ -37,7 +37,7 @@
         <a href="contact.html" class="">Contact</a>
         
           <a href="connexion.html" class="">Connexion</a>
-          <a class="btn btn-primary btn-sm" href="inscription.html">S'inscrire</a>
+          <a class="btn btn-primary btn-sm" href="inscription.html">Demande d'inscription</a>
         
       </nav>
     </div>
@@ -339,7 +339,7 @@
           <ul>
             <li><a href="formations.html">Nos formations</a></li>
             <li><a href="a-propos.html">Le centre</a></li>
-            <li><a href="inscription.html">Inscription en ligne</a></li>
+            <li><a href="inscription.html">Demande d'inscription</a></li>
             <li><a href="espace.html">Espace élève</a></li>
           </ul>
         </div>
@@ -367,6 +367,7 @@
   <script src="main.js"></script><script>
 document.addEventListener('submit', function (e) {
   e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
   var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
   var f = document.createElement('div'); f.className = 'flash info';
   f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';

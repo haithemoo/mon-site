@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#0b1d5c">
   <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="demo-bar">Aperçu de test · données fictives · formulaires désactivés —
+<body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
 <a href="accueil.html">Site public</a> · <a href="espace.html">Espace élève</a> · <a href="admin.html">Administration</a></div>
 <div class="app-mobilebar">
   <a class="brand" href="accueil.html"><img class="brand-mark" src="emblem-cfp-144.webp" srcset="emblem-cfp-144.webp 1x, emblem-cfp-288.webp 2x" width="49" height="40" alt="" decoding="async"><span class="wordmark"><span class="brand-name">CFP Academy</span><span class="brand-sub"></span></span></a>
@@ -42,7 +42,7 @@
       <nav class="side-nav">
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="-Q3aLWYjN0MQIZ_o-VKTH_eINMbVcLZxF9aPFXwcJ6s"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o3eBPj4S-zX3lp3kqXfYOQklfDEmWC6WK2fpRfeXlUE"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -71,7 +71,7 @@
       <div class="enr-card">
         <div class="enr-top">
           <div><span class="tag">Coiffure &amp; Esthétique femme</span><h3>Coloration, mèches, ombré &amp; balayage</h3>
-            <span class="small muted">Demande du 06/11/2026 10:19 · Début le 20/10/2026</span></div>
+            <span class="small muted">Demande du 06/11/2026 10:38 · Début le 20/10/2026</span></div>
           <span class="badge b-confirmee">Confirmée</span>
         </div>
         
@@ -110,7 +110,7 @@
     <div class="card" id="nouvelle">
       <h3>S'inscrire à une formation</h3>
       
-      <form method="post" action="#" style="display:grid;gap:.8rem"><input type="hidden" name="_csrf" value="-Q3aLWYjN0MQIZ_o-VKTH_eINMbVcLZxF9aPFXwcJ6s">
+      <form method="post" action="#" style="display:grid;gap:.8rem"><input type="hidden" name="_csrf" value="o3eBPj4S-zX3lp3kqXfYOQklfDEmWC6WK2fpRfeXlUE">
         <select name="course_id" required aria-label="Formation souhaitée">
           <option value="1">Brushing professionnel — Sur demande</option><option value="3">Hair Botox — Sur demande</option><option value="4">Soins visage profonds — Sur demande</option><option value="5">Peeling &amp; Microneedling — Sur demande</option>
         </select>
@@ -127,6 +127,7 @@
 <script src="main.js"></script><script>
 document.addEventListener('submit', function (e) {
   e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
   var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
   var f = document.createElement('div'); f.className = 'flash info';
   f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';

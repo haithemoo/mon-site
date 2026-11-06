@@ -1,7 +1,8 @@
 // CFP Academy — petits comportements d'interface
 document.addEventListener('DOMContentLoaded', () => {
   // Les messages flash disparaissent après 6 secondes
-  document.querySelectorAll('.flash').forEach((el) => {
+  // Sur la page du code SMS, le message reste affiché (il peut contenir le code en mode test)
+  if (!document.querySelector('.otp-form')) document.querySelectorAll('.flash').forEach((el) => {
     setTimeout(() => { el.style.transition = 'opacity .4s'; el.style.opacity = '0'; setTimeout(() => el.remove(), 400); }, 6000);
   });
   // Feuille de présence : « Tous présents » / « Tout effacer »
@@ -51,5 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     });
+  });
+})();
+
+// Compte à rebours sur « Renvoyer le code »
+(function () {
+  document.querySelectorAll('button[data-wait]').forEach((btn) => {
+    let left = parseInt(btn.dataset.wait, 10) || 0;
+    if (left <= 0) return;
+    const label = btn.textContent.replace(/\s*\(\d+ s\)$/, '');
+    const tick = setInterval(() => {
+      left -= 1;
+      if (left <= 0) { clearInterval(tick); btn.disabled = false; btn.textContent = label; }
+      else btn.textContent = label + ' (' + left + ' s)';
+    }, 1000);
   });
 })();
