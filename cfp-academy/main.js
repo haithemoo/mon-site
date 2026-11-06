@@ -142,3 +142,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reg-card[id]').forEach((c) => obs.observe(c));
   }
 })();
+
+// Mode sombre de l'administration (préférence mémorisée sur cet appareil)
+document.querySelectorAll(".theme-toggle").forEach((btn) => {
+  const root = document.documentElement;
+  const sync = () => btn.setAttribute("aria-pressed", root.dataset.theme === "dark" ? "true" : "false");
+  sync();
+  btn.addEventListener("click", () => {
+    if (root.dataset.theme === "dark") delete root.dataset.theme; else root.dataset.theme = "dark";
+    try { localStorage.setItem("cfp-theme", root.dataset.theme || "light"); } catch (e) { /* stockage indisponible */ }
+    sync();
+  });
+});
+
+// Recherche instantanée dans le catalogue des formations
+(() => {
+  const input = document.getElementById("course-q");
+  if (!input) return;
+  const none = document.getElementById("course-none");
+  const chips = document.getElementById("chips");
+  const norm = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ًͯ-ْ]/g, "");
+  input.addEventListener("input", () => {
+    const q = norm(input.value.trim());
+    let shown = 0;
+    document.querySelectorAll(".course-section").forEach((sec) => {
+      let n = 0;
+      sec.querySelectorAll(".course-row").forEach((row) => {
+        const ok = !q || norm(row.textContent).includes(q);
+        row.hidden = !ok;
+        if (ok) n += 1;
+      });
+      if (q) sec.hidden = n === 0;
+      shown += n;
+    });
+    if (q && chips) chips.querySelectorAll(".chip").forEach((c) => c.classList.toggle("active", !c.dataset.filter));
+    if (!q) document.querySelectorAll(".course-section").forEach((sec) => { sec.hidden = false; });
+    if (none) none.hidden = shown > 0;
+  });
+})();

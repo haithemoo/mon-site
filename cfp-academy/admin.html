@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Administration — CFP Academy</title>
+  <title>Tableau de bord — CFP Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
+  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -29,6 +30,11 @@
     
     
 
+<form class="side-search" method="get" action="admin-eleves.html" role="search">
+  <label for="side-q" class="sr-only">Rechercher un élève</label>
+  <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+</svg></span><input id="side-q" name="q" type="search" placeholder="Élève, téléphone, e-mail…" value="">
+</form>
 <div>
   <div class="side-label">Gestion</div>
   <nav class="side-nav">
@@ -38,6 +44,8 @@
 </svg>Élèves</a>
     <a href="admin-inscriptions.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
 </svg>Inscriptions<span class="count">3</span></a>
+    <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
+</svg>Paiements</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-formations.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
@@ -52,11 +60,14 @@
     <div class="side-foot">
       <div class="side-user" data-initials="AC"><span><b>Administrateur CFP</b>admin@cfp-academy.tn</span></div>
       <nav class="side-nav">
+        <button type="button" class="theme-toggle" aria-pressed="false"><span class="ic-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+</svg></span><span class="ic-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+</svg></span><span class="t-dark">Mode sombre</span><span class="t-light">Mode clair</span></button>
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
         <a href="admin.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -66,78 +77,367 @@
 
 
     
-<div class="page-head">
-  <div><h1>Tableau de bord</h1><p>Vue d'ensemble du centre.</p></div>
-  <div class="actions"><a class="btn btn-light" href="admin-presences.html">Faire l'appel</a><a class="btn btn-primary" href="admin-eleve-nouveau.html">+ Ajouter un élève</a></div>
+
+
+<div class="page-head dash-head">
+  <div><p class="eyebrow-date">Vendredi 6 novembre 2026</p><h1>Bonjour Administrateur</h1><p>Voici l'activité du centre en novembre 2026.</p></div>
+  <div class="actions"><a class="btn btn-light" href="admin-presences.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
+</svg>Faire l'appel</a><a class="btn btn-primary" href="admin-eleve-nouveau.html">+ Ajouter un élève</a></div>
 </div>
-<div class="stats">
-  <div class="stat accent"><div class="label">Élèves inscrits</div><div class="value">7</div></div>
-  <div class="stat"><div class="label">Demandes à traiter</div><div class="value">3</div></div>
-  <div class="stat"><div class="label">Formations en cours</div><div class="value">4</div></div>
-  <div class="stat"><div class="label">Encaissé ce mois</div><div class="value">0 <small>DT</small></div></div>
-  <div class="stat"><div class="label">Absences (7 j)</div><div class="value">0</div></div>
-  <div class="stat"><div class="label">Messages non lus</div><div class="value">1</div></div>
+
+<div class="kpis">
+  <a class="kpi kpi-main" href="admin-paiements.html">
+    <span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
+</svg></span>
+    <span class="kpi-label">Encaissé ce mois</span>
+    <span class="kpi-value">1 400 DT</span>
+    <span class="kpi-foot"><span class="evo up" title="Par rapport au mois précédent">▲ 32 %</span> 15 260 DT sur 12 mois</span>
+  </a>
+  <a class="kpi" href="admin-paiements.html">
+    <span class="kpi-icon warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>
+</svg></span>
+    <span class="kpi-label">Reste à encaisser</span>
+    <span class="kpi-value">6 640 DT</span>
+    <span class="kpi-foot">14 élèves avec un solde</span>
+  </a>
+  <a class="kpi" href="admin-inscriptions.html">
+    <span class="kpi-icon gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg></span>
+    <span class="kpi-label">Demandes à traiter</span>
+    <span class="kpi-value">3</span>
+    <span class="kpi-foot"><span class="evo up" title="Par rapport au mois précédent">▲ 300 %</span> 8 reçues ce mois</span>
+  </a>
+  <a class="kpi" href="admin-eleves.html">
+    <span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/>
+</svg></span>
+    <span class="kpi-label">Élèves en formation</span>
+    <span class="kpi-value">9</span>
+    <span class="kpi-foot">31 comptes élève au total</span>
+  </a>
+  <a class="kpi" href="admin-presences.html">
+    <span class="kpi-icon ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+</svg></span>
+    <span class="kpi-label">Taux de présence (30 j)</span>
+    <span class="kpi-value">77 <small>%</small></span>
+    <span class="kpi-foot">13 présences relevées</span>
+  </a>
 </div>
-<div class="two-col">
-  <div class="card">
-    <div class="card-head"><h3>Demandes d'inscription en attente</h3><a class="small" href="admin-inscriptions.html">Tout voir →</a></div>
+
+<div class="dash-grid">
+  <section class="card chart-card span-2">
+    <div class="card-head"><div><h3>Encaissements</h3><p class="small muted">12 derniers mois · 15 260 DT</p></div><a class="small" href="admin-paiements-historique.html">Détail →</a></div>
+    <svg class="chart" viewBox="0 0 720 240" role="img" aria-label="Encaissements des 12 derniers mois">
+  <defs><linearGradient id="g-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--chart-1)" stop-opacity=".32"/><stop offset="1" stop-color="var(--chart-1)" stop-opacity="0"/></linearGradient></defs>
+  <line class="grid" x1="46" x2="706" y1="210.0" y2="210.0"/><text class="tick" x="38" y="214.0" text-anchor="end">0</text><line class="grid" x1="46" x2="706" y1="161.5" y2="161.5"/><text class="tick" x="38" y="165.5" text-anchor="end">500</text><line class="grid" x1="46" x2="706" y1="113.0" y2="113.0"/><text class="tick" x="38" y="117.0" text-anchor="end">1 000</text><line class="grid" x1="46" x2="706" y1="64.5" y2="64.5"/><text class="tick" x="38" y="68.5" text-anchor="end">1 500</text><line class="grid" x1="46" x2="706" y1="16.0" y2="16.0"/><text class="tick" x="38" y="20.0" text-anchor="end">2 000</text>
+  <path d="M46.0,124.2 L106.0,82.9 L166.0,74.2 L226.0,85.2 L286.0,102.1 L346.0,56.3 L406.0,53.8 L466.0,81.8 L526.0,73.0 L586.0,125.1 L646.0,107.0 L706.0,74.2 L706.0,210 L46.0,210 Z" fill="url(#g-area)"/>
+  <path d="M46.0,124.2 L106.0,82.9 L166.0,74.2 L226.0,85.2 L286.0,102.1 L346.0,56.3 L406.0,53.8 L466.0,81.8 L526.0,73.0 L586.0,125.1 L646.0,107.0 L706.0,74.2" class="line"/>
+  
+  <g class="pt"><circle cx="46.0" cy="124.2" r="4"/><rect class="hit" x="20.0" y="0" width="52" height="240"/><title>déc. : 885 DT</title>
+  </g>
+  <text class="tick" x="46.0" y="232" text-anchor="middle">déc.</text>
+  
+  <g class="pt"><circle cx="106.0" cy="82.9" r="4"/><rect class="hit" x="80.0" y="0" width="52" height="240"/><title>janv. : 1 310 DT</title>
+  </g>
+  <text class="tick" x="106.0" y="232" text-anchor="middle">janv.</text>
+  
+  <g class="pt"><circle cx="166.0" cy="74.2" r="4"/><rect class="hit" x="140.0" y="0" width="52" height="240"/><title>févr. : 1 400 DT</title>
+  </g>
+  <text class="tick" x="166.0" y="232" text-anchor="middle">févr.</text>
+  
+  <g class="pt"><circle cx="226.0" cy="85.2" r="4"/><rect class="hit" x="200.0" y="0" width="52" height="240"/><title>mars : 1 287 DT</title>
+  </g>
+  <text class="tick" x="226.0" y="232" text-anchor="middle">mars</text>
+  
+  <g class="pt"><circle cx="286.0" cy="102.1" r="4"/><rect class="hit" x="260.0" y="0" width="52" height="240"/><title>avr. : 1 112 DT</title>
+  </g>
+  <text class="tick" x="286.0" y="232" text-anchor="middle">avr.</text>
+  
+  <g class="pt"><circle cx="346.0" cy="56.3" r="4"/><rect class="hit" x="320.0" y="0" width="52" height="240"/><title>mai : 1 585 DT</title>
+  </g>
+  <text class="tick" x="346.0" y="232" text-anchor="middle">mai</text>
+  
+  <g class="pt"><circle cx="406.0" cy="53.8" r="4"/><rect class="hit" x="380.0" y="0" width="52" height="240"/><title>juin : 1 610 DT</title>
+  </g>
+  <text class="tick" x="406.0" y="232" text-anchor="middle">juin</text>
+  
+  <g class="pt"><circle cx="466.0" cy="81.8" r="4"/><rect class="hit" x="440.0" y="0" width="52" height="240"/><title>juil. : 1 322 DT</title>
+  </g>
+  <text class="tick" x="466.0" y="232" text-anchor="middle">juil.</text>
+  
+  <g class="pt"><circle cx="526.0" cy="73.0" r="4"/><rect class="hit" x="500.0" y="0" width="52" height="240"/><title>août : 1 412 DT</title>
+  </g>
+  <text class="tick" x="526.0" y="232" text-anchor="middle">août</text>
+  
+  <g class="pt"><circle cx="586.0" cy="125.1" r="4"/><rect class="hit" x="560.0" y="0" width="52" height="240"/><title>sept. : 875 DT</title>
+  </g>
+  <text class="tick" x="586.0" y="232" text-anchor="middle">sept.</text>
+  
+  <g class="pt"><circle cx="646.0" cy="107.0" r="4"/><rect class="hit" x="620.0" y="0" width="52" height="240"/><title>oct. : 1 062 DT</title>
+  </g>
+  <text class="tick" x="646.0" y="232" text-anchor="middle">oct.</text>
+  
+  <g class="pt"><circle cx="706.0" cy="74.2" r="4"/><rect class="hit" x="680.0" y="0" width="52" height="240"/><title>nov. : 1 400 DT</title>
+  <text class="val" x="700.0" y="64.2" text-anchor="end">1 400 DT</text></g>
+  <text class="tick" x="706.0" y="232" text-anchor="middle">nov.</text>
+  
+</svg>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><div><h3>Présences</h3><p class="small muted">30 derniers jours</p></div></div>
+    <div class="donut-wrap">
+  <svg class="donut" viewBox="0 0 140 140" role="img" aria-label="Répartition des présences">
+    <circle cx="70" cy="70" r="52" class="donut-bg"/>
+    <circle cx="70" cy="70" r="52" stroke="#14a36b" stroke-dasharray="226.19 100.53" stroke-dashoffset="-0.00" class="donut-seg"><title>Présent : 9 (69 %)</title></circle><circle cx="70" cy="70" r="52" stroke="#e3b341" stroke-dasharray="25.13 301.59" stroke-dashoffset="-226.19" class="donut-seg"><title>En retard : 1 (8 %)</title></circle><circle cx="70" cy="70" r="52" stroke="#e5484d" stroke-dasharray="75.40 251.33" stroke-dashoffset="-251.33" class="donut-seg"><title>Absent : 3 (23 %)</title></circle>
+    <text x="70" y="68" text-anchor="middle" class="donut-value">77 %</text>
+    <text x="70" y="86" text-anchor="middle" class="donut-label">présents</text>
+  </svg>
+  <ul class="legend"><li><i style="background:#14a36b"></i>Présent<b>9</b></li><li><i style="background:#e3b341"></i>En retard<b>1</b></li><li><i style="background:#3d7bff"></i>Absence justifiée<b>0</b></li><li><i style="background:#e5484d"></i>Absent<b>3</b></li></ul>
+</div>
+  </section>
+
+  <section class="card chart-card span-2">
+    <div class="card-head"><div><h3>Demandes d'inscription</h3><p class="small muted">Par mois · <i class="dot dot-all"></i>reçues <i class="dot dot-ok"></i>confirmées</p></div><a class="small" href="admin-inscriptions.html">Toutes →</a></div>
+    <svg class="chart" viewBox="0 0 720 240" role="img" aria-label="Demandes d&#39;inscription par mois">
+  <line class="grid" x1="46" x2="706" y1="210.0" y2="210.0"/><text class="tick" x="38" y="214.0" text-anchor="end">0</text><line class="grid" x1="46" x2="706" y1="161.5" y2="161.5"/><text class="tick" x="38" y="165.5" text-anchor="end">2</text><line class="grid" x1="46" x2="706" y1="113.0" y2="113.0"/><text class="tick" x="38" y="117.0" text-anchor="end">4</text><line class="grid" x1="46" x2="706" y1="64.5" y2="64.5"/><text class="tick" x="38" y="68.5" text-anchor="end">6</text><line class="grid" x1="46" x2="706" y1="16.0" y2="16.0"/><text class="tick" x="38" y="20.0" text-anchor="end">8</text>
+  
+  <g class="bar"><rect class="b-all" x="58.5" y="137.2" width="30" height="72.8" rx="5"/>
+    <rect class="b-ok" x="58.5" y="137.2" width="30" height="72.8" rx="5"/>
+    <title>déc. : 3 demande(s), dont 3 confirmée(s)</title>
+    <text class="val" x="73.5" y="131.2" text-anchor="middle">3</text></g>
+  <text class="tick" x="73.5" y="232" text-anchor="middle">déc.</text>
+  
+  <g class="bar"><rect class="b-all" x="113.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="113.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>janv. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="128.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="128.5" y="232" text-anchor="middle">janv.</text>
+  
+  <g class="bar"><rect class="b-all" x="168.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="168.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>févr. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="183.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="183.5" y="232" text-anchor="middle">févr.</text>
+  
+  <g class="bar"><rect class="b-all" x="223.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="223.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>mars : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="238.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="238.5" y="232" text-anchor="middle">mars</text>
+  
+  <g class="bar"><rect class="b-all" x="278.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="278.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>avr. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="293.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="293.5" y="232" text-anchor="middle">avr.</text>
+  
+  <g class="bar"><rect class="b-all" x="333.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="333.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>mai : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="348.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="348.5" y="232" text-anchor="middle">mai</text>
+  
+  <g class="bar"><rect class="b-all" x="388.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="388.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>juin : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="403.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="403.5" y="232" text-anchor="middle">juin</text>
+  
+  <g class="bar"><rect class="b-all" x="443.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="443.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>juil. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="458.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="458.5" y="232" text-anchor="middle">juil.</text>
+  
+  <g class="bar"><rect class="b-all" x="498.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="498.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>août : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="513.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="513.5" y="232" text-anchor="middle">août</text>
+  
+  <g class="bar"><rect class="b-all" x="553.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="553.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>sept. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="568.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="568.5" y="232" text-anchor="middle">sept.</text>
+  
+  <g class="bar"><rect class="b-all" x="608.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <rect class="b-ok" x="608.5" y="161.5" width="30" height="48.5" rx="5"/>
+    <title>oct. : 2 demande(s), dont 2 confirmée(s)</title>
+    <text class="val" x="623.5" y="155.5" text-anchor="middle">2</text></g>
+  <text class="tick" x="623.5" y="232" text-anchor="middle">oct.</text>
+  
+  <g class="bar"><rect class="b-all" x="663.5" y="16.0" width="30" height="194.0" rx="5"/>
+    <rect class="b-ok" x="663.5" y="88.8" width="30" height="121.2" rx="5"/>
+    <title>nov. : 8 demande(s), dont 5 confirmée(s)</title>
+    <text class="val" x="678.5" y="10.0" text-anchor="middle">8</text></g>
+  <text class="tick" x="678.5" y="232" text-anchor="middle">nov.</text>
+  
+</svg>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><div><h3>Par section</h3><p class="small muted">Inscriptions (hors annulées)</p></div></div>
+    <ul class="hbars">
+      <li title="Coiffure &amp; Esthétique femme : 11 inscription(s), dont 2 en cours"><span class="hb-label">Coiffure &amp; esthétique F.</span><span class="hb-track"><span style="width:100%"></span></span><b>11</b></li><li title="Langues : 5 inscription(s), dont 1 en cours"><span class="hb-label">Langues</span><span class="hb-track"><span style="width:45%"></span></span><b>5</b></li><li title="Coiffure homme : 3 inscription(s), dont 1 en cours"><span class="hb-label">Coiffure homme</span><span class="hb-track"><span style="width:27%"></span></span><b>3</b></li><li title="Bureautique &amp; Secrétariat : 3 inscription(s), dont 1 en cours"><span class="hb-label">Bureautique</span><span class="hb-track"><span style="width:27%"></span></span><b>3</b></li><li title="Comptabilité &amp; Finance : 3 inscription(s), dont 2 en cours"><span class="hb-label">Comptabilité</span><span class="hb-track"><span style="width:27%"></span></span><b>3</b></li><li title="Maintenance informatique : 3 inscription(s), dont 1 en cours"><span class="hb-label">Maintenance info.</span><span class="hb-track"><span style="width:27%"></span></span><b>3</b></li><li title="Startup &amp; Marketing : 3 inscription(s), dont 1 en cours"><span class="hb-label">Startup &amp; marketing</span><span class="hb-track"><span style="width:27%"></span></span><b>3</b></li><li title="Coaching : 0 inscription(s), dont 0 en cours"><span class="hb-label">Coaching</span><span class="hb-track"><span style="width:0%"></span></span><b>0</b></li>
+    </ul>
+  </section>
+
+  <section class="card span-2">
+    <div class="card-head"><h3>Demandes en attente</h3><a class="small" href="admin-inscriptions.html">Tout voir →</a></div>
     <div class="table-wrap"><table>
-      <thead><tr><th>Élève</th><th>Formation</th><th>Reçue le</th><th></th></tr></thead>
+      <thead><tr><th>Candidat</th><th>Formation</th><th>Reçue le</th><th></th></tr></thead>
       <tbody>
       
         <tr>
           <td><a class="name" href="admin-eleve.html">Sarra Jlassi</a><br><a class="small" href="tel:+21655000003">+216 55 000 003</a></td>
           <td>Anglais</td>
-          <td class="small">06/11/2026 11:28</td>
+          <td class="small">06/11/2026 11:53</td>
           <td><div class="actions">
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
           </div></td>
         </tr>
       
         <tr>
           <td><a class="name" href="admin-eleve.html">Mehdi Ayari</a><br><a class="small" href="tel:+21655000004">+216 55 000 004</a></td>
           <td>Maintenance informatique</td>
-          <td class="small">06/11/2026 11:28</td>
+          <td class="small">06/11/2026 11:53</td>
           <td><div class="actions">
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
           </div></td>
         </tr>
       
         <tr>
-          <td><a class="name" href="admin-eleve.html">Karim Ferchichi</a><br><a class="small" href="tel:+21655000006">+216 55 000 006</a> <span class="badge b-en_attente" title="Le candidat n'a pas encore saisi le code SMS">Tél. non vérifié</span></td>
+          <td><a class="name" href="admin-eleve.html">Karim Ferchichi</a><br><a class="small" href="tel:+21655000006">+216 55 000 006</a> <span class="badge b-en_attente" title="Le candidat n'a pas encore confirmé son numéro">Tél. non vérifié</span></td>
           <td>Startup &amp; Marketing</td>
-          <td class="small">06/11/2026 11:28</td>
+          <td class="small">06/11/2026 11:53</td>
           <td><div class="actions">
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
-            <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="confirmee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-primary btn-sm">Confirmer</button></form>
+            <form method="post" action="#"><input type="hidden" name="_csrf" value="c4rY12hFm93pLQvN53jFvwQfXT9s14GxGqM6iB1_fuY"><input type="hidden" name="status" value="annulee"><input type="hidden" name="back" value="/admin/"><button class="btn btn-danger btn-sm">Refuser</button></form>
           </div></td>
         </tr>
       
       </tbody>
     </table></div>
-  </div>
-  <div class="stack">
-    <div class="card">
-      <h3>Formations les plus demandées</h3>
+  </section>
+
+  <section class="card todo-card">
+    <div class="card-head"><h3>À faire</h3></div>
+    <ul class="todo">
+      <li><a href="admin-inscriptions.html"><span class="t-ic gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg></span><span><b>3 demandes</b> à confirmer ou refuser</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
+      <li><a href="admin-paiements.html"><span class="t-ic warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
+</svg></span><span><b>14 soldes</b> à relancer (6 640 DT)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
+      <li><a href="#absences"><span class="t-ic bad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>
+</svg></span><span><b>1 élève</b> souvent absent</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
+      <li><a href="admin-eleves.html"><span class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>
+</svg></span><span><b>1 numéro</b> non vérifié</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
+      <li><a href="admin-messages.html"><span class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
+</svg></span><span><b>1 message</b> non lu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
+      <li><a href="admin-formations.html"><span class="t-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg></span><span><b>21 formations</b> sans tarif (« Sur demande »)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/>
+</svg></a></li>
       
-      <ul class="mini-list">
-        <li style="display:block"><div style="display:flex;justify-content:space-between"><span>Coloration, mèches, ombré &amp; balayage</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li><li style="display:block"><div style="display:flex;justify-content:space-between"><span>Coiffure homme &amp; dégradé</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li><li style="display:block"><div style="display:flex;justify-content:space-between"><span>Bureautique &amp; Secrétariat</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li><li style="display:block"><div style="display:flex;justify-content:space-between"><span>Comptabilité &amp; Finance</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li><li style="display:block"><div style="display:flex;justify-content:space-between"><span>Maintenance informatique</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li><li style="display:block"><div style="display:flex;justify-content:space-between"><span>Anglais</span><b>1</b></div><div class="progress" style="margin-top:.4rem"><span style="width:100%"></span></div></li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Derniers inscrits</h3>
-      <ul class="mini-list">
-        <li><a class="name" href="admin-eleve.html">Amira Ben Salah</a><span class="small muted">06/11/2026 11:28</span></li>
-        <li><a class="name" href="admin-eleve.html">Yassine Trabelsi</a><span class="small muted">06/11/2026 11:28</span></li>
-        <li><a class="name" href="admin-eleve.html">Nour Gharbi</a><span class="small muted">06/11/2026 11:28</span></li>
-        <li><a class="name" href="admin-eleve.html">Sarra Jlassi</a><span class="small muted">06/11/2026 11:28</span></li>
-        <li><a class="name" href="admin-eleve.html">Mehdi Ayari</a><span class="small muted">06/11/2026 11:28</span></li>
-        
-      </ul>
-    </div>
-  </div>
+      
+    </ul>
+  </section>
+
+  <section class="card span-2">
+    <div class="card-head"><div><h3>Soldes à relancer</h3><p class="small muted">Les plus élevés en premier · le message WhatsApp est prérempli dans la langue de l'élève</p></div><a class="small" href="admin-paiements.html">Tous les soldes →</a></div>
+    <div class="table-wrap"><table>
+  <thead><tr><th>Élève</th><th>Formation</th><th>Payé</th><th>Reste</th><th></th></tr></thead>
+  <tbody>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Chaima Hamdi</a></td>
+      <td>Comptabilité &amp; Finance</td>
+      <td class="pay-cell"><span class="small nowrap">400 DT / 1 200 DT</span><span class="progress thin"><span style="width:33%"></span></span></td>
+      <td><b class="amount-due">800 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21622119219?text=Bonjour%20Chaima%2C%20petit%20rappel%20%3A%20il%20reste%20800%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Comptabilit%C3%A9%20%26%20Finance%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Dorra Saidi</a></td>
+      <td>Français</td>
+      <td class="pay-cell"><span class="small nowrap">150 DT / 900 DT</span><span class="progress thin"><span style="width:17%"></span></span></td>
+      <td><b class="amount-due">750 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21625122222?text=Bonjour%20Dorra%2C%20petit%20rappel%20%3A%20il%20reste%20750%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Fran%C3%A7ais%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Yassine Trabelsi</a></td>
+      <td>Coiffure homme &amp; dégradé</td>
+      <td class="pay-cell"><span class="small nowrap">250 DT / 900 DT</span><span class="progress thin"><span style="width:28%"></span></span></td>
+      <td><b class="amount-due">650 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21655000001?text=Bonjour%20Yassine%2C%20petit%20rappel%20%3A%20il%20reste%20650%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Coiffure%20homme%20%26%20d%C3%A9grad%C3%A9%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Nour Gharbi</a></td>
+      <td>Bureautique &amp; Secrétariat</td>
+      <td class="pay-cell"><span class="small nowrap">300 DT / 900 DT</span><span class="progress thin"><span style="width:33%"></span></span></td>
+      <td><b class="amount-due">600 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21655000002?text=Bonjour%20Nour%2C%20petit%20rappel%20%3A%20il%20reste%20600%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Bureautique%20%26%20Secr%C3%A9tariat%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Bilel Hammami</a></td>
+      <td>Bureautique &amp; Secrétariat <span class="badge b-terminee">Terminée</span></td>
+      <td class="pay-cell"><span class="small nowrap">600 DT / 1 200 DT</span><span class="progress thin"><span style="width:50%"></span></span></td>
+      <td><b class="amount-due">600 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21625104204?text=Bonjour%20Bilel%2C%20petit%20rappel%20%3A%20il%20reste%20600%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Bureautique%20%26%20Secr%C3%A9tariat%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+    <tr>
+      <td><a class="name nowrap" href="admin-eleve.html">Amira Ben Salah</a></td>
+      <td>Coloration, mèches, ombré &amp; balayage</td>
+      <td class="pay-cell"><span class="small nowrap">400 DT / 900 DT</span><span class="progress thin"><span style="width:44%"></span></span></td>
+      <td><b class="amount-due">500 DT</b></td>
+      
+      <td><div class="actions">
+        <a class="btn btn-wa btn-sm" href="https://wa.me/21655000000?text=Bonjour%20Amira%2C%20petit%20rappel%20%3A%20il%20reste%20500%20DT%20%C3%A0%20r%C3%A9gler%20pour%20la%20formation%20%C2%AB%20Coloration%2C%20m%C3%A8ches%2C%20ombr%C3%A9%20%26%20balayage%20%C2%BB.%20Vous%20pouvez%20payer%20directement%20au%20centre.%20Merci%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>Relancer</a>
+        <a class="btn btn-light btn-sm" href="admin-eleve.html">Encaisser</a>
+      </div></td>
+    </tr>
+  
+  </tbody>
+</table></div>
+  </section>
+
+  <section class="card" id="absences">
+    <div class="card-head"><div><h3>Absences répétées</h3><p class="small muted">2 absences ou plus en 30 jours</p></div></div>
+    <ul class="mini-list">
+      <li><span><a class="name" href="admin-eleve.html">Nour Gharbi</a><br><span class="small muted">Bureautique &amp; Secrétariat · 2 absences · dernière le 27/10/2026</span></span><a class="btn btn-wa btn-sm" href="https://wa.me/21655000002?text=Bonjour%20Nour%2C%20nous%20avons%20remarqu%C3%A9%202%20absences%20%C3%A0%20la%20formation%20%C2%AB%20Bureautique%20%26%20Secr%C3%A9tariat%20%C2%BB.%20Tout%20va%20bien%20%3F%20N%27h%C3%A9sitez%20pas%20%C3%A0%20nous%20contacter%20%E2%80%94%20CFP%20Academy" target="_blank" rel="noopener" title="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a></li>
+      
+    </ul>
+  </section>
 </div>
 
   </main>
