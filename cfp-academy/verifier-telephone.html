@@ -45,7 +45,7 @@
 
 <div class="flashes" role="status">
   
-  <div class="flash success"><span>Mode test : aucun SMS n&#39;est envoyé. Votre code est 447450.</span><button type="button" aria-label="Fermer" onclick="this.parentElement.remove()">×</button></div>
+  <div class="flash success"><span>Votre demande est enregistrée. Dernière étape : confirmez votre numéro de téléphone.</span><button type="button" aria-label="Fermer" onclick="this.parentElement.remove()">×</button></div>
   
 </div>
 
@@ -56,34 +56,50 @@
     <div class="logo-badge"><img class="logo-full" src="logo-cfp-320.webp" srcset="logo-cfp-320.webp 1x, logo-cfp.webp 2x" width="150" height="148" alt="CFP Academy — Centre de Formation Professionnelle" loading="lazy" decoding="async"></div>
     <span class="eyebrow">Dernière étape</span>
     <h1>Confirmez votre numéro.</h1>
-    <p style="color:#c9d1e0">Ce code nous permet de vérifier que le numéro est bien le vôtre, avant de transmettre votre demande d'inscription à notre équipe.</p>
+    <p style="color:#c9d1e0">Nous vérifions que le numéro +216 55 ••• •06 est bien le vôtre avant de transmettre votre demande d'inscription à notre équipe. C'est gratuit avec WhatsApp.</p>
   </div>
   <div class="auth-main">
-    <div class="card" style="max-width:480px">
-      <h2 style="font-size:2rem">Code de vérification</h2>
+    <div class="card verify-card" style="max-width:500px" data-status-url="/verifier-telephone/statut" data-ok-url="/verifier-telephone?ok=1">
+      <h2 style="font-size:2rem">Vérification du numéro</h2>
+      <p class="muted" style="margin-bottom:1.2rem">Numéro de la demande : <b style="color:var(--ink)">+216 55 000 006</b></p>
+
+      <section class="wa-box" aria-labelledby="wa-title">
+        <h3 id="wa-title" class="wa-title"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg> Avec WhatsApp <span class="badge b-confirmee">Gratuit · recommandé</span></h3>
+        <ol class="wa-steps">
+          <li>Appuyez sur le bouton : WhatsApp s'ouvre avec un message prêt.</li>
+          <li>Envoyez le message <b>sans le modifier</b>, depuis le WhatsApp du +216 55 ••• •06.</li>
+          <li>Cette page se met à jour toute seule dès réception.</li>
+        </ol>
+        <p class="wa-code">Votre code : <b>CFP-449389</b></p>
+        
+          <p class="notice" style="margin:.2rem 0 .8rem"><b>Mode test :</b> le numéro WhatsApp du centre n'est pas encore configuré. Le bouton ci-dessous simule la réception du message.</p>
+          <form method="post" data-demo-next="espace.html"><input type="hidden" name="_csrf" value="H_CRqxvqiW6KSyrlLTuwbi_PxlT02JSD50nJ6nYp300"><input type="hidden" name="action" value="simulate_whatsapp">
+            <button class="btn btn-wa btn-block"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg> Simuler l'envoi WhatsApp</button>
+          </form>
+        
+      </section>
+
       
-      <p class="muted">Saisissez le code à 6 chiffres envoyé par SMS au <b style="color:var(--ink)">+216 55 ••• •06</b>. Il est valable 10 minutes.</p>
-      
-      <p class="notice" style="margin:0 0 1rem"><b>Mode test :</b> aucun SMS n'est envoyé, le code s'affiche dans le message en haut de la page.</p>
-      <form method="post" class="otp-form" data-demo-next="espace.html"><input type="hidden" name="_csrf" value="hlRD9mdQdyQbYQB5uY_qEmaFLkaCXUVQBy3aE0MoXjY">
-        <input type="hidden" name="action" value="verify">
-        <label for="vf-code">Code reçu</label>
-        <input id="vf-code" class="otp-input" name="code" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9 ]{6,7}" maxlength="7" placeholder="••••••" required autofocus>
-        <button class="btn btn-primary btn-block">Vérifier mon numéro</button>
-      </form>
-      <form method="post" style="margin-top:.8rem"><input type="hidden" name="_csrf" value="hlRD9mdQdyQbYQB5uY_qEmaFLkaCXUVQBy3aE0MoXjY">
-        <input type="hidden" name="action" value="resend">
-        <button class="btn btn-light btn-block" data-wait="59" disabled>Renvoyer le code (59 s)</button>
-      </form>
-      <details class="inline" style="margin-top:1.2rem">
-        <summary>Ce n'est pas le bon numéro ?</summary>
-        <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="hlRD9mdQdyQbYQB5uY_qEmaFLkaCXUVQBy3aE0MoXjY">
-          <input type="hidden" name="action" value="change">
-          <div><label for="vf-phone">Nouveau numéro mobile</label><input id="vf-phone" name="phone" inputmode="tel" placeholder="Ex. : 55 123 456" required></div>
-          <button class="btn btn-ghost btn-sm">Changer et recevoir un code</button>
+      <details class="inline sms-box" >
+        <summary>Pas de WhatsApp ? Recevoir un code par SMS</summary>
+        <p class="notice" style="margin:.4rem 0 .8rem"><b>Mode test :</b> aucun SMS n'est envoyé, le code s'affiche en haut de la page.</p>
+        
+        <form method="post" style="margin-top:.7rem"><input type="hidden" name="_csrf" value="H_CRqxvqiW6KSyrlLTuwbi_PxlT02JSD50nJ6nYp300">
+          <input type="hidden" name="action" value="resend">
+          <button class="btn btn-light btn-block" data-wait="0" >Recevoir un code par SMS</button>
         </form>
       </details>
-      <p class="small muted" style="margin:1.2rem 0 0">Pas de SMS après quelques minutes ? Appelez-nous au 55 366 216.</p>
+      
+
+      <details class="inline" style="margin-top:1rem">
+        <summary>Ce n'est pas le bon numéro ?</summary>
+        <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="H_CRqxvqiW6KSyrlLTuwbi_PxlT02JSD50nJ6nYp300">
+          <input type="hidden" name="action" value="change">
+          <div><label for="vf-phone">Nouveau numéro mobile</label><input id="vf-phone" name="phone" inputmode="tel" placeholder="Ex. : 55 123 456" required></div>
+          <button class="btn btn-ghost btn-sm">Changer le numéro</button>
+        </form>
+      </details>
+      <p class="small muted" style="margin:1.2rem 0 0">Un souci ? Appelez-nous au 55 366 216.</p>
     </div>
   </div>
 </div>
@@ -125,7 +141,7 @@
       <div class="footer-bottom"><span>© 2026 CFP Academy — Tous droits réservés.</span><span>Tunis Centre Ville</span></div>
     </div>
   </footer>
-  <a class="wa-float" href="https://wa.me/21655366216" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg></a>
+  
   <script src="main.js"></script><script>
 document.addEventListener('submit', function (e) {
   e.preventDefault(); e.stopImmediatePropagation();

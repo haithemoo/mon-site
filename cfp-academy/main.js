@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Les messages flash disparaissent après 6 secondes
   // Sur la page du code SMS, le message reste affiché (il peut contenir le code en mode test)
-  if (!document.querySelector('.otp-form')) document.querySelectorAll('.flash').forEach((el) => {
+  if (!document.querySelector('.verify-card')) document.querySelectorAll('.flash').forEach((el) => {
     setTimeout(() => { el.style.transition = 'opacity .4s'; el.style.opacity = '0'; setTimeout(() => el.remove(), 400); }, 6000);
   });
   // Feuille de présence : « Tous présents » / « Tout effacer »
@@ -67,4 +67,19 @@ document.addEventListener('DOMContentLoaded', () => {
       else btn.textContent = label + ' (' + left + ' s)';
     }, 1000);
   });
+})();
+
+// Vérification WhatsApp : la page se met à jour dès que le message est reçu
+(function () {
+  const card = document.querySelector('.verify-card[data-status-url]');
+  if (!card || !document.querySelector('.wa-wait')) return;
+  let tries = 0;
+  const timer = setInterval(async () => {
+    tries += 1;
+    if (tries > 400) { clearInterval(timer); return; }  // ~20 minutes
+    try {
+      const r = await fetch(card.dataset.statusUrl, { headers: { Accept: 'application/json' }, cache: 'no-store' });
+      if (r.ok && (await r.json()).verified) { clearInterval(timer); location.href = card.dataset.okUrl; }
+    } catch (e) { /* réseau momentanément indisponible : on réessaie */ }
+  }, 3000);
 })();
