@@ -83,3 +83,73 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) { /* réseau momentanément indisponible : on réessaie */ }
   }, 3000);
 })();
+
+// Règlement intérieur : langue, recherche, sommaire actif
+(function () {
+  const blocks = document.querySelectorAll('.reg-i18n');
+  if (!blocks.length) return;
+  const q = document.getElementById('reg-q');
+  function setLang(code) {
+    blocks.forEach((b) => { b.hidden = b.dataset.lang !== code; });
+    document.querySelectorAll('[data-set-lang]').forEach((btn) => btn.setAttribute('aria-pressed', btn.dataset.setLang === code ? 'true' : 'false'));
+    if (q) { q.placeholder = q.dataset['ph' + (code === 'ar' ? 'Ar' : 'Fr')]; q.dir = code === 'ar' ? 'rtl' : 'ltr'; search(); }
+    try { localStorage.setItem('cfp-reg-lang', code); } catch (e) {}
+    try { const u = new URL(location.href); u.searchParams.set('lang', code); history.replaceState(null, '', u.pathname + u.search + u.hash); } catch (e) {}
+  }
+  document.querySelectorAll('[data-set-lang]').forEach((btn) => btn.addEventListener('click', () => setLang(btn.dataset.setLang)));
+  try { const saved = localStorage.getItem('cfp-reg-lang'); if (saved && !location.search.includes('lang=')) setLang(saved); } catch (e) {}
+
+  const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ًͯ-ْ]/g, '');
+  function clearMarks(root) { root.querySelectorAll('mark.reg-hit').forEach((m) => m.replaceWith(document.createTextNode(m.textContent))); root.normalize(); }
+  function mark(el, term) {
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach((n) => {
+      const i = norm(n.textContent).indexOf(term);
+      if (i < 0 || n.parentNode.closest('mark')) return;
+      const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + term.length);
+      const m = document.createElement('mark'); m.className = 'reg-hit'; r.surroundContents(m);
+    });
+  }
+  function search() {
+    const active = document.querySelector('.reg-lang-block:not([hidden])');
+    if (!active) return;
+    const term = norm((q && q.value || '').trim());
+    const status = active.querySelector('.reg-status');
+    clearMarks(active);
+    let hits = 0;
+    active.querySelectorAll('.reg-card').forEach((card) => {
+      let cardHit = false;
+      card.querySelectorAll('.reg-art').forEach((art) => {
+        const ok = !term || norm(art.textContent).includes(term);
+        art.classList.toggle('no-hit', !ok);
+        if (ok && term) { hits += 1; mark(art, term); }
+        cardHit = cardHit || ok;
+      });
+      if (!card.querySelector('.reg-art')) cardHit = !term || norm(card.textContent).includes(term);
+      card.classList.toggle('no-hit', !cardHit);
+    });
+    active.querySelectorAll('.reg-part-title').forEach((t) => t.classList.toggle('no-hit', !!term));
+    active.querySelector('.reg-essentials').hidden = !!term;
+    if (status) {
+      status.hidden = !term;
+      const ar = active.dataset.lang === 'ar';
+      status.textContent = hits ? hits + ' ' + (ar ? 'فصل يحتوي على هذه الكلمة' : 'article(s) trouvé(s)') : (ar ? 'لا يوجد فصل يحتوي على هذه الكلمة.' : 'Aucun article ne contient ce mot.');
+    }
+  }
+  if (q) { let t; q.addEventListener('input', () => { clearTimeout(t); t = setTimeout(search, 150); }); }
+
+  // Sommaire : met en évidence le titre en cours de lecture
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const link = document.querySelector('.reg-toc a[href="#' + en.target.id + '"]');
+        if (!link) return;
+        link.closest('.reg-toc').querySelectorAll('a.is-current').forEach((a) => a.classList.remove('is-current'));
+        link.classList.add('is-current');
+      });
+    }, { rootMargin: '-120px 0px -60% 0px' });
+    document.querySelectorAll('.reg-card[id]').forEach((c) => obs.observe(c));
+  }
+})();
