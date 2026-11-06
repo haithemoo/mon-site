@@ -86,19 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Règlement intérieur : langue, recherche, sommaire actif
 (function () {
-  const blocks = document.querySelectorAll('.reg-i18n');
-  if (!blocks.length) return;
+  if (!document.querySelector('.reg-i18n')) return;
   const q = document.getElementById('reg-q');
-  function setLang(code) {
-    blocks.forEach((b) => { b.hidden = b.dataset.lang !== code; });
-    document.querySelectorAll('[data-set-lang]').forEach((btn) => btn.setAttribute('aria-pressed', btn.dataset.setLang === code ? 'true' : 'false'));
-    if (q) { q.placeholder = q.dataset['ph' + (code === 'ar' ? 'Ar' : 'Fr')]; q.dir = code === 'ar' ? 'rtl' : 'ltr'; search(); }
-    try { localStorage.setItem('cfp-reg-lang', code); } catch (e) {}
-    try { const u = new URL(location.href); u.searchParams.set('lang', code); history.replaceState(null, '', u.pathname + u.search + u.hash); } catch (e) {}
-  }
-  document.querySelectorAll('[data-set-lang]').forEach((btn) => btn.addEventListener('click', () => setLang(btn.dataset.setLang)));
-  try { const saved = localStorage.getItem('cfp-reg-lang'); if (saved && !location.search.includes('lang=')) setLang(saved); } catch (e) {}
-
   const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ًͯ-ْ]/g, '');
   function clearMarks(root) { root.querySelectorAll('mark.reg-hit').forEach((m) => m.replaceWith(document.createTextNode(m.textContent))); root.normalize(); }
   function mark(el, term) {

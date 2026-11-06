@@ -1,15 +1,17 @@
 
 <!doctype html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bureautique &amp; Secrétariat — CFP Academy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="alternate" hreflang="fr" href="admin-formation.html">
+  <link rel="alternate" hreflang="ar" href="admin-formation.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
   <meta name="robots" content="noindex, nofollow">
@@ -52,7 +54,9 @@
       <nav class="side-nav">
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="e3YXO991aktFcU7iE8uwI00HVPGrIDkNpNAeIipCEe4"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <a href="admin-formation.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+</svg>النسخة العربية</a>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -64,7 +68,7 @@
     
 <p class="small"><a href="admin-formations.html">← Formations</a></p>
 <div class="page-head"><div><h1>Bureautique &amp; Secrétariat</h1></div></div>
-<form class="card" method="post" style="max-width:860px"><input type="hidden" name="_csrf" value="e3YXO991aktFcU7iE8uwI00HVPGrIDkNpNAeIipCEe4">
+<form class="card" method="post" style="max-width:860px"><input type="hidden" name="_csrf" value="l0QQIVamCs2l4e8mfQ3oB5y_fPw2E3-GytYdm8amIi0">
   <div class="form-grid">
     <div class="full"><label for="crs-title">Titre <span class="req">*</span></label><input id="crs-title" name="title" required value="Bureautique &amp; Secrétariat"></div>
     <div><label for="crs-category">Catégorie <span class="req">*</span></label><input id="crs-category" name="category" required list="cats" value="Bureautique &amp; Secrétariat">
@@ -74,6 +78,11 @@
     <div><label for="crs-price">Tarif (DT) — vide = « Sur demande »</label><input id="crs-price" name="price" inputmode="numeric" value=""></div>
     <div class="full"><label for="crs-summary">Résumé (carte du catalogue)</label><input id="crs-summary" name="summary" value="Word, Excel, PowerPoint, gestion du courrier et organisation administrative." maxlength="200"></div>
     <div class="full"><label for="crs-description">Description détaillée</label><textarea id="crs-description" name="description" rows="8">Word, Excel, PowerPoint, gestion du courrier et organisation administrative.</textarea></div>
+    <div class="full lang-block"><span class="lang-block-title">Version arabe <span lang="ar">(النسخة العربية)</span> — affichée sur le site en arabe</span></div>
+    <div class="full" dir="rtl" lang="ar"><label for="crs-title_ar">العنوان</label><input id="crs-title_ar" name="title_ar" value="الإعلامية المكتبية والكتابة"></div>
+    <div class="full" dir="rtl" lang="ar"><label for="crs-summary_ar">الملخّص (بطاقة الدليل)</label><input id="crs-summary_ar" name="summary_ar" value="Word وExcel وPowerPoint، التصرّف في المراسلات والتنظيم الإداري." maxlength="200"></div>
+    <div class="full" dir="rtl" lang="ar"><label for="crs-description_ar">الوصف المفصّل</label><textarea id="crs-description_ar" name="description_ar" rows="6">Word وExcel وPowerPoint، التصرّف في المراسلات والتنظيم الإداري.</textarea></div>
+    <div dir="rtl" lang="ar"><label for="crs-duration_ar">المدة</label><input id="crs-duration_ar" name="duration_ar" value="" placeholder="مثال: شهر · 3 حصص في الأسبوع"></div>
     <div><label for="crs-sort_order">Ordre d'affichage</label><input id="crs-sort_order" type="number" name="sort_order" value="12"></div>
     <div style="display:flex;align-items:end"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible sur le site</label></div>
   </div>
