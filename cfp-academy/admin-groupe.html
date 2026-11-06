@@ -70,6 +70,8 @@
   <nav class="side-nav">
     <a href="admin-groupes.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>
 </svg>Groupes &amp; sessions</a>
+    <a href="admin-formateurs.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/>
+</svg>Formateurs</a>
     <a href="admin-certificats.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
 </svg>Certificats</a>
   </nav>
@@ -96,7 +98,7 @@
 </svg>Voir le site</a>
         <a href="admin-groupe.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -112,7 +114,7 @@
 </svg>Faire l'appel</a></div></div>
 <div class="two-col">
   <div class="stack">
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="members">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="members">
       <div class="card-head"><h3>Élèves</h3><span class="small muted">Cochez les élèves de ce groupe</span></div>
       <div class="table-wrap"><table>
         <thead><tr><th></th><th>Élève</th><th>Assiduité</th><th>Moyenne</th><th>Certificat</th></tr></thead>
@@ -139,7 +141,7 @@
       <div class="actions" style="margin-top:1rem"><button class="btn btn-primary btn-sm">Enregistrer la liste</button></div>
     </form>
     
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="grades">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="grades">
       <h3>Saisir des notes</h3>
       <div class="form-grid">
         <div><label for="gr-title">Évaluation</label><input id="gr-title" name="title" required placeholder="Ex. : Examen pratique"></div>
@@ -153,14 +155,15 @@
     <div class="card"><h3>Évaluations du groupe</h3><ul class="mini-list"><li><span><b>Test de colorimétrie</b> <span class="small muted">· 29/10/2026 · 3 note(s)</span></span><b>14.7 / 20</b></li></ul></div>
   </div>
   <div class="stack">
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="save">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="save">
       <h3>Session</h3>
       <div class="form-grid">
         <div class="full"><label for="gs-name">Nom</label><input id="gs-name" name="name" value="Session octobre 2026"></div>
         <div><label for="gs-start">Début</label><input id="gs-start" type="date" name="start_date" value="2026-10-20"></div>
         <div><label for="gs-end">Fin</label><input id="gs-end" type="date" name="end_date" value="2027-02-20"></div>
         <div class="full"><label for="gs-schedule">Horaires</label><input id="gs-schedule" name="schedule" value="Lundi et mercredi, 9h – 12h"></div>
-        <div><label for="gs-trainer">Formateur</label><input id="gs-trainer" name="trainer" value="Mme Leila B."></div>
+        <div class="full"><label for="gs-trainer">Formateur</label><select id="gs-trainer" name="trainer_id"><option value="">— Aucun / autre —</option><option value="2" >Karim M.</option><option value="1" selected>Leila B.</option><option value="3" >Sarah K.</option></select>
+          <a class="small" href="admin-formateur.html">Fiche du formateur →</a></div>
         <div><label for="gs-room">Salle</label><input id="gs-room" name="room" value="Atelier coiffure"></div>
         <div><label for="gs-cap">Places</label><input id="gs-cap" name="capacity" type="number" min="1" value="12"></div>
         <div style="display:flex;align-items:end"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Session en cours</label></div>
@@ -169,11 +172,11 @@
     </form>
     <div class="card">
       <h3>Fin de session</h3>
-      <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="certify">
+      <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="certify">
         <div><label for="gc-kind">Délivrer à tous les élèves du groupe</label><select id="gc-kind" name="kind"><option value="attestation">Attestation de formation</option><option value="certificat">Certificat de formation</option><option value="reussite">Attestation de réussite</option></select></div>
         <button class="btn btn-light btn-sm">Délivrer les certificats</button></form>
-      <form method="post" style="margin-top:1rem" data-confirm="Clôturer la session ? Les formations en cours passeront en « Terminée »."><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="finish"><button class="btn btn-light btn-sm">Clôturer la session</button></form>
-      <form method="post" style="margin-top:1rem" data-confirm="Supprimer ce groupe ? Les inscriptions sont conservées."><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="delete"><button class="btn btn-danger btn-sm">Supprimer le groupe</button></form>
+      <form method="post" style="margin-top:1rem" data-confirm="Clôturer la session ? Les formations en cours passeront en « Terminée »."><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="finish"><button class="btn btn-light btn-sm">Clôturer la session</button></form>
+      <form method="post" style="margin-top:1rem" data-confirm="Supprimer ce groupe ? Les inscriptions sont conservées."><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><input type="hidden" name="action" value="delete"><button class="btn btn-danger btn-sm">Supprimer le groupe</button></form>
     </div>
   </div>
 </div>

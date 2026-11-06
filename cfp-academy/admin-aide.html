@@ -70,6 +70,8 @@
   <nav class="side-nav">
     <a href="admin-groupes.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>
 </svg>Groupes &amp; sessions</a>
+    <a href="admin-formateurs.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/>
+</svg>Formateurs</a>
     <a href="admin-certificats.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
 </svg>Certificats</a>
   </nav>
@@ -96,7 +98,7 @@
 </svg>Voir le site</a>
         <a href="admin-aide.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="oMNVrTNtqurjmXVSQWaQYX7lu03DgkooVu96FwKUgtY"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -111,7 +113,7 @@
 </svg>État du site</a></div>
 <div class="help-grid">
   <nav class="card help-toc" aria-label="Sommaire"><b>Sommaire</b>
-    <a href="#debut">Premiers pas</a><a href="#demandes">Demandes d&#39;inscription</a><a href="#crm">Prospects et relances</a><a href="#pedago">Groupes, présences, notes</a><a href="#certif">Certificats</a><a href="#argent">Paiements et finances</a><a href="#site">Modifier le site</a><a href="#langues">Français et arabe</a><a href="#sauvegarde">Sauvegardes</a>
+    <a href="#debut">Premiers pas</a><a href="#demandes">Demandes d&#39;inscription</a><a href="#crm">Prospects et relances</a><a href="#pedago">Groupes, présences, notes</a><a href="#formateurs">Formateurs</a><a href="#certif">Certificats</a><a href="#argent">Paiements et finances</a><a href="#site">Modifier le site</a><a href="#langues">Français et arabe</a><a href="#sauvegarde">Sauvegardes</a>
   </nav>
   <div class="help-body">
     <section class="card" id="debut"><h2>Premiers pas</h2><ol>
@@ -134,6 +136,11 @@
       <ul><li><a href="admin-groupes.html">Groupes &amp; sessions</a> : créez la session (dates, horaires, formateur, salle) et cochez ses élèves. Ils voient ces informations dans leur espace.</li>
         <li><a href="admin-presences.html">Présences</a> : faites l'appel par formation et par date. Les absences répétées apparaissent dans le tableau de bord.</li>
         <li>Notes : dans le groupe (« Saisir des notes » pour toute la classe) ou dans la fiche de l'élève.</li></ul></section>
+    <section class="card" id="formateurs"><h2>Formateurs</h2>
+      <ul><li><a href="admin-formateurs.html">Formateurs</a> : créez la fiche (téléphone, spécialité, CIN, documents), puis choisissez le formateur dans chaque <a href="admin-groupes.html">groupe</a>.</li>
+        <li><b>Créer son espace</b> (fiche → Espace formateur) : un mot de passe provisoire s'affiche une fois. Le formateur se connecte sur la même page de connexion, voit <b>uniquement ses groupes</b>, fait l'appel et saisit les notes. Il ne voit pas les paiements des élèves.</li>
+        <li><b>Rémunération</b> : choisissez le mode (à l'heure, à la séance, au mois) et le tarif. Chaque appel du formateur compte une séance ; vous pouvez aussi ajouter une séance à la main. Le reste à payer se calcule par mois ; « Enregistrer un paiement » l'ajoute aussi aux dépenses dans les Finances.</li>
+        <li>Cochez « Afficher sur la page Nos formateurs » et ajoutez photo et présentation FR/AR pour la page publique <code>/formateurs</code>.</li></ul></section>
     <section class="card" id="certif"><h2>Certificats</h2>
       <ul><li>Fin de session : « Clôturer la session » puis « Délivrer les certificats » dans le groupe, ou un par un depuis la fiche de l'élève.</li>
         <li>Chaque certificat a un <b>numéro</b> et un <b>code</b> : n'importe qui peut vérifier son authenticité sur <code>/certificat</code>. Un certificat annulé apparaît comme non valable.</li>
