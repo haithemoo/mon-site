@@ -180,3 +180,100 @@ document.querySelectorAll(".theme-toggle").forEach((btn) => {
     if (none) none.hidden = shown > 0;
   });
 })();
+
+// ---- Listes réordonnables (glisser-déposer + boutons ↑ ↓) : menus, FAQ, catégories, sections de l'accueil
+document.querySelectorAll("[data-sortable]").forEach((list) => {
+  const items = () => [...list.children].filter((li) => li.dataset.id);
+  const sync = () => {
+    const input = document.getElementById(list.dataset.target);
+    if (!input) return;
+    if (list.classList.contains("sub")) {   // sous-liste : on renvoie l'ordre de toutes les listes du même formulaire
+      const all = [...document.querySelectorAll(`[data-target="${list.dataset.target}"]`)];
+      input.value = all.flatMap((l) => [...l.children].filter((li) => li.dataset.id).map((li) => li.dataset.id)).join(",");
+    } else {
+      input.value = items().map((li) => li.dataset.id).join(",");
+    }
+    if (list.dataset.autosubmit) document.getElementById(list.dataset.autosubmit)?.submit();
+  };
+  let dragged = null;
+  list.addEventListener("dragstart", (e) => {
+    const li = e.target.closest("li[data-id]");
+    if (!li || li.parentElement !== list) return;
+    dragged = li; li.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+    try { e.dataTransfer.setData("text/plain", li.dataset.id); } catch (err) { /* ignoré */ }
+    e.stopPropagation();
+  });
+  list.addEventListener("dragover", (e) => {
+    if (!dragged) return;
+    e.preventDefault();
+    const over = e.target.closest("li[data-id]");
+    if (!over || over === dragged || over.parentElement !== list) return;
+    const r = over.getBoundingClientRect();
+    list.insertBefore(dragged, e.clientY > r.top + r.height / 2 ? over.nextSibling : over);
+  });
+  list.addEventListener("dragend", () => { if (!dragged) return; dragged.classList.remove("dragging"); dragged = null; sync(); });
+  list.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-move]");
+    if (!btn) return;
+    const li = btn.closest("li"), dir = Number(btn.dataset.move);
+    const sib = dir < 0 ? li.previousElementSibling : li.nextElementSibling;
+    if (!sib) return;
+    list.insertBefore(li, dir < 0 ? sib : sib.nextSibling);
+    sync();
+  });
+});
+
+// ---- Pipeline commercial : glisser une carte vers une autre colonne
+(() => {
+  const board = document.querySelector(".kanban");
+  if (!board) return;
+  const csrf = board.dataset.csrf;
+  let card = null;
+  board.addEventListener("dragstart", (e) => { card = e.target.closest(".kcard"); if (card) card.classList.add("dragging"); });
+  board.addEventListener("dragend", () => { if (card) card.classList.remove("dragging"); card = null; board.querySelectorAll(".over").forEach((z) => z.classList.remove("over")); });
+  board.querySelectorAll("[data-drop]").forEach((zone) => {
+    zone.addEventListener("dragover", (e) => { if (card) { e.preventDefault(); zone.classList.add("over"); } });
+    zone.addEventListener("dragleave", () => zone.classList.remove("over"));
+    zone.addEventListener("drop", async (e) => {
+      e.preventDefault(); zone.classList.remove("over");
+      if (!card || card.parentElement === zone) return;
+      const moving = card, from = card.parentElement;
+      zone.querySelector(".kempty")?.remove();
+      zone.prepend(moving);
+      const body = new URLSearchParams({ _csrf: csrf, status: zone.dataset.drop });
+      try {
+        const r = await fetch(moving.dataset.url, { method: "POST", body, headers: { "X-Requested-With": "fetch" } });
+        const data = await r.json();
+        if (data.redirect) { location.href = data.redirect; return; }
+        if (!data.ok) throw new Error();
+        board.querySelectorAll(".kcol").forEach((col) => { col.querySelector(".kcount").textContent = col.querySelectorAll(".kcard").length; });
+      } catch (err) { from.prepend(moving); alert("Le changement n'a pas pu être enregistré."); }
+    });
+  });
+})();
+
+// ---- Choix d'image : aperçu immédiat
+document.querySelectorAll("select[data-picker]").forEach((sel) => {
+  sel.addEventListener("change", () => {
+    const thumb = document.querySelector(`[data-thumb="${sel.id}"]`);
+    if (!thumb) return;
+    const src = sel.selectedOptions[0]?.dataset.src;
+    thumb.innerHTML = src ? `<img src="${src}" alt="">` : "";
+  });
+});
+
+// ---- Dates rapides (Demain, Dans 3 j…)
+document.querySelectorAll("[data-days][data-for]").forEach((b) => b.addEventListener("click", () => {
+  const d = new Date(); d.setDate(d.getDate() + Number(b.dataset.days));
+  const input = document.getElementById(b.dataset.for);
+  if (input) input.value = d.toISOString().slice(0, 10);
+}));
+
+// ---- Zone d'import de la médiathèque
+document.querySelectorAll(".dropzone").forEach((zone) => {
+  const input = zone.querySelector("input[type=file]");
+  ["dragenter", "dragover"].forEach((ev) => zone.addEventListener(ev, (e) => { e.preventDefault(); zone.classList.add("over"); }));
+  ["dragleave", "drop"].forEach((ev) => zone.addEventListener(ev, () => zone.classList.remove("over")));
+  zone.addEventListener("drop", (e) => { e.preventDefault(); if (input && e.dataTransfer.files.length) input.files = e.dataTransfer.files; });
+});
