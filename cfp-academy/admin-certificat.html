@@ -29,13 +29,13 @@
   .verify { text-align: start; } .verify b { color: #0b1d5c; }
   .seal { width: 26mm; height: 26mm; border-radius: 50%; border: 2px solid #c99a2e; display: grid; place-items: center; margin: 0 auto; font-family: Cinzel, serif; font-size: 8pt; color: #9a6a0a; line-height: 1.2; }
   .revoked { position: absolute; inset: 0; display: grid; place-items: center; font: 800 60pt "Plus Jakarta Sans"; color: rgba(229,72,77,.25); transform: rotate(-18deg); }
-  @media print { body { background: #fff; } .toolbar { display: none; } .sheet { margin: 0; box-shadow: none; } }
-  @media screen and (max-width: 1150px) { .sheet { transform: scale(.6); transform-origin: top center; margin-bottom: -80mm; } }
+  body { overflow-x: hidden; }
+  @media print { body { background: #fff; } .toolbar { display: none; } .sheet { margin: 0 !important; box-shadow: none; transform: none !important; } }
 </style>  <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
 <a href="accueil.html">Site public</a> · <a href="espace.html">Espace élève</a> · <a href="admin.html">Administration</a></div>
-<div class="toolbar"><button onclick="window.print()">Imprimer / enregistrer en PDF</button><a href="admin-certificats.html">← Certificats</a></div>
+<div class="toolbar"><button data-print>Imprimer / enregistrer en PDF</button><a href="admin-certificats.html">← Certificats</a></div>
 <div class="sheet"><div class="frame">
   
   <div class="head"><img src="logo-cfp.webp" alt="CFP Academy"><div><div class="brand">CFP ACADEMY</div><div class="small">Centre de Formation Professionnelle — Tunis</div></div><div class="ar">مركز التكوين المهني</div></div>
@@ -51,9 +51,19 @@
     <p class="meta">du 20/10/2026 au 20/02/2027 · mention <b>Bien</b></p>
   </div>
   <div class="foot">
-    <div class="verify">N° <b>CFP-2026-0001</b><br>Délivré à Tunis le 06/11/2026<br>Vérification : <b>https://www.cfpacademy.tn/certificat/7F31D66C2F</b></div>
+    <div class="verify">N° <b>CFP-2026-0001</b><br>Délivré à Tunis le 06/11/2026<br>Vérification : <b>https://www.cfpacademy.tn/certificat/3D5B9D28BC</b></div>
     <div class="seal">CFP<br>ACADEMY<br>TUNIS</div>
     <div><div class="sign">La Direction</div></div>
   </div>
 </div></div>
+<script src="main.js"></script><script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
+  var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
+  var f = document.createElement('div'); f.className = 'flash info';
+  f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';
+  box.appendChild(f); setTimeout(function () { f.remove(); }, 4000);
+}, true);
+</script>
 </body></html>

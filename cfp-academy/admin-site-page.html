@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin-site-page.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
-  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -46,6 +46,8 @@
 </svg>Inscriptions<span class="count">3</span></a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
+    <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+</svg>Finances</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-messages.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
@@ -77,6 +79,10 @@
   <nav class="side-nav">
     <a href="admin-site.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Gestion du site</a>
+    <a href="admin-etat.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg>État du site</a>
+    <a href="admin-aide.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg>Aide</a>
   </nav>
 </div>
 
@@ -90,7 +96,7 @@
 </svg>Voir le site</a>
         <a href="admin-site-page.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -103,7 +109,7 @@
 <p class="small"><a href="admin-site-pages.html">← Pages</a></p>
 <div class="page-head"><div><h1>Journée portes ouvertes</h1>
   <p><span class="badge b-confirmee">Publiée</span> · <code>/page/portes-ouvertes</code></p></div></div>
-<form method="post" class="card page-editor"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes">
+<form method="post" class="card page-editor"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74">
   <div class="form-grid">
     <div><label for="title_fr">Titre <span class="lang-tag">FR</span> <span class="req">*</span></label><input id="title_fr" name="title_fr" required value="Journée portes ouvertes" maxlength="160"></div>
     <div dir="rtl" lang="ar"><label for="title_ar">العنوان <span class="lang-tag">AR</span></label><input id="title_ar" name="title_ar" value="يوم الأبواب المفتوحة" maxlength="160"></div>
@@ -144,7 +150,7 @@ Visitez nos ateliers, rencontrez les formateurs et posez vos questions.
     <button class="btn btn-light" name="action" value="preview" formtarget="_blank">Prévisualiser</button>
     <button class="btn btn-primary" name="action" value="publish">Publier</button>
     <button class="btn btn-light" name="action" value="disable">Dépublier</button>
-    <button class="btn btn-danger" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer définitivement cette page ?')" style="margin-inline-start:auto">Supprimer</button>
+    <button class="btn btn-danger" name="action" value="delete" formnovalidate data-confirm="Supprimer définitivement cette page ?" style="margin-inline-start:auto">Supprimer</button>
   </div>
 </form>
 

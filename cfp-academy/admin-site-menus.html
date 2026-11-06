@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin-site-menus.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
-  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -46,6 +46,8 @@
 </svg>Inscriptions<span class="count">3</span></a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
+    <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+</svg>Finances</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-messages.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
@@ -77,6 +79,10 @@
   <nav class="side-nav">
     <a href="admin-site.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Gestion du site</a>
+    <a href="admin-etat.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg>État du site</a>
+    <a href="admin-aide.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg>Aide</a>
   </nav>
 </div>
 
@@ -90,7 +96,7 @@
 </svg>Voir le site</a>
         <a href="admin-site-menus.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -134,21 +140,21 @@
 <div class="two-col">
   <div class="card">
     <div class="card-head"><h3>Liens (français)</h3>
-      <form method="post" onsubmit="return confirm('Remplacer ce menu par une copie de l\'autre langue ?')"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="copy"><button class="btn btn-light btn-sm">Copier depuis l&#39;arabe</button></form></div>
-    <form method="post" id="menu-order"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="reorder"><input type="hidden" name="ids" id="menu-ids"></form>
+      <form method="post" data-confirm="Remplacer ce menu par une copie de l'autre langue ?"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="copy"><button class="btn btn-light btn-sm">Copier depuis l&#39;arabe</button></form></div>
+    <form method="post" id="menu-order"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="reorder"><input type="hidden" name="ids" id="menu-ids"></form>
     <ul class="sort-list menu-tree" data-sortable data-target="menu-ids" data-autosubmit="menu-order">
       
       <li data-id="1" draggable="true" class="">
         <span class="drag" title="Glisser pour déplacer" aria-hidden="true">⠿</span>
         <details class="menu-edit"><summary><b >Accueil</b> <span class="small muted">/</span></summary>
-          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="mid" value="1">
+          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="mid" value="1">
   <div class="form-grid">
     <div><label>Libellé</label><input name="label" value="Accueil" required maxlength="60"></div>
     <div><label>Lien</label><input name="url" value="/" required list="link-suggestions"></div>
     <div><label>Sous-menu de</label><select name="parent_id"><option value="">— Premier niveau —</option><option value="3" >Formations</option><option value="5" >Règlement intérieur</option><option value="7" >Contact</option></select></div>
     <div style="display:flex;gap:1rem;align-items:end;flex-wrap:wrap"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><label class="check"><input type="checkbox" name="new_tab" value="1" > Nouvel onglet</label></div>
   </div>
-  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer ce lien ?')">Supprimer</button></div>
+  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate data-confirm="Supprimer ce lien ?">Supprimer</button></div>
 </form></details>
         
       </li>
@@ -156,14 +162,14 @@
       <li data-id="3" draggable="true" class="">
         <span class="drag" title="Glisser pour déplacer" aria-hidden="true">⠿</span>
         <details class="menu-edit"><summary><b >Formations</b> <span class="small muted">/formations</span></summary>
-          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="mid" value="3">
+          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="mid" value="3">
   <div class="form-grid">
     <div><label>Libellé</label><input name="label" value="Formations" required maxlength="60"></div>
     <div><label>Lien</label><input name="url" value="/formations" required list="link-suggestions"></div>
     <div><label>Sous-menu de</label><select name="parent_id"><option value="">— Premier niveau —</option><option value="1" >Accueil</option><option value="5" >Règlement intérieur</option><option value="7" >Contact</option></select></div>
     <div style="display:flex;gap:1rem;align-items:end;flex-wrap:wrap"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><label class="check"><input type="checkbox" name="new_tab" value="1" > Nouvel onglet</label></div>
   </div>
-  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer ce lien ?')">Supprimer</button></div>
+  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate data-confirm="Supprimer ce lien ?">Supprimer</button></div>
 </form></details>
         
       </li>
@@ -171,14 +177,14 @@
       <li data-id="5" draggable="true" class="">
         <span class="drag" title="Glisser pour déplacer" aria-hidden="true">⠿</span>
         <details class="menu-edit"><summary><b >Règlement intérieur</b> <span class="small muted">/reglement-interieur</span></summary>
-          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="mid" value="5">
+          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="mid" value="5">
   <div class="form-grid">
     <div><label>Libellé</label><input name="label" value="Règlement intérieur" required maxlength="60"></div>
     <div><label>Lien</label><input name="url" value="/reglement-interieur" required list="link-suggestions"></div>
     <div><label>Sous-menu de</label><select name="parent_id"><option value="">— Premier niveau —</option><option value="1" >Accueil</option><option value="3" >Formations</option><option value="7" >Contact</option></select></div>
     <div style="display:flex;gap:1rem;align-items:end;flex-wrap:wrap"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><label class="check"><input type="checkbox" name="new_tab" value="1" > Nouvel onglet</label></div>
   </div>
-  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer ce lien ?')">Supprimer</button></div>
+  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate data-confirm="Supprimer ce lien ?">Supprimer</button></div>
 </form></details>
         
       </li>
@@ -186,21 +192,21 @@
       <li data-id="7" draggable="true" class="">
         <span class="drag" title="Glisser pour déplacer" aria-hidden="true">⠿</span>
         <details class="menu-edit"><summary><b >Contact</b> <span class="small muted">/contact</span></summary>
-          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="mid" value="7">
+          <form method="post" class="menu-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="mid" value="7">
   <div class="form-grid">
     <div><label>Libellé</label><input name="label" value="Contact" required maxlength="60"></div>
     <div><label>Lien</label><input name="url" value="/contact" required list="link-suggestions"></div>
     <div><label>Sous-menu de</label><select name="parent_id"><option value="">— Premier niveau —</option><option value="1" >Accueil</option><option value="3" >Formations</option><option value="5" >Règlement intérieur</option></select></div>
     <div style="display:flex;gap:1rem;align-items:end;flex-wrap:wrap"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><label class="check"><input type="checkbox" name="new_tab" value="1" > Nouvel onglet</label></div>
   </div>
-  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer ce lien ?')">Supprimer</button></div>
+  <div class="actions" style="margin-top:.8rem"><button class="btn btn-primary btn-sm" name="action" value="update">Enregistrer</button><button class="btn btn-danger btn-sm" name="action" value="delete" formnovalidate data-confirm="Supprimer ce lien ?">Supprimer</button></div>
 </form></details>
         
       </li>
       
     </ul>
   </div>
-  <form method="post" class="card"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="add">
+  <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="add">
     <h3>Ajouter un lien</h3>
     <label for="new-label">Libellé</label><input id="new-label" name="label" required maxlength="60" >
     <label for="new-url" style="margin-top:.8rem">Lien</label><input id="new-url" name="url" required list="link-suggestions" placeholder="/formations, /page/…, https://…">

@@ -880,3 +880,23 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .photo-row { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap; } .photo-row input[type=file] { max-width: 220px; font-size: .8rem; }
 [data-theme="dark"] .due-card, [data-theme="dark"] .convert-card { background: var(--paper); }
 [data-theme="dark"] .kcard, [data-theme="dark"] .sort-list > li, [data-theme="dark"] .text-item, [data-theme="dark"] .media-item, [data-theme="dark"] .hub-card { background: var(--paper); }
+.fin-bars { grid-template-columns: repeat(12, 1fr); gap: .4rem; }
+.fin-bars .mb { text-decoration: none !important; color: inherit; border-radius: 10px; padding-top: .3rem; }
+.fin-bars .mb.cur { background: var(--bg); } .fin-bars .mb:hover { background: var(--soft); }
+.mb-bad { background: #e5484d; } .net-neg { color: #b8292f; font-weight: 700; }
+.status-score { display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1rem; }
+.status-score h3 { margin: 0 0 .2rem; }
+.score-ring { --p: 0; width: 84px; height: 84px; border-radius: 50%; flex: none; display: grid; place-items: center;
+  background: conic-gradient(var(--ok) calc(var(--p) * 1%), var(--soft) 0); }
+.score-ring b { width: 64px; height: 64px; border-radius: 50%; background: var(--paper); display: grid; place-items: center; font-size: 1.1rem; }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.checklist li { display: flex; gap: .7rem; align-items: center; }
+.checklist li > span:nth-child(2) { flex: 1; min-width: 0; }
+.ck { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: .8rem; flex: none; color: #fff; background: var(--ok); }
+.checklist .todo .ck { background: #e08a00; }
+.help-grid { display: grid; grid-template-columns: 230px 1fr; gap: 1rem; align-items: start; }
+.help-toc { position: sticky; top: 1rem; display: flex; flex-direction: column; gap: .35rem; }
+.help-toc a { font-size: .9rem; } .help-body { display: grid; gap: 1rem; } .help-body .card { margin: 0; }
+.help-body h2 { font-size: 1.5rem; } .help-body li { margin-bottom: .35rem; }
+@media (max-width: 900px) { .help-grid { grid-template-columns: 1fr; } .help-toc { position: static; } }
+.hp { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; opacity: 0; }

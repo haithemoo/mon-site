@@ -277,3 +277,42 @@ document.querySelectorAll(".dropzone").forEach((zone) => {
   ["dragleave", "drop"].forEach((ev) => zone.addEventListener(ev, () => zone.classList.remove("over")));
   zone.addEventListener("drop", (e) => { e.preventDefault(); if (input && e.dataTransfer.files.length) input.files = e.dataTransfer.files; });
 });
+
+// ---- Comportements déclaratifs (aucun script dans les pages : politique de sécurité stricte)
+document.addEventListener("submit", (e) => {
+  const form = e.target;
+  const msg = (e.submitter && e.submitter.dataset.confirm) || form.dataset.confirm;
+  if (msg && !window.confirm(msg)) e.preventDefault();
+}, true);
+document.addEventListener("change", (e) => {
+  const el = e.target;
+  if (el.matches && el.matches("[data-autosubmit]") && el.form) el.form.requestSubmit ? el.form.requestSubmit() : el.form.submit();
+});
+document.addEventListener("click", (e) => {
+  const t = e.target;
+  if (!t.closest) return;
+  if (t.closest("[data-print]")) { window.print(); return; }
+  if (t.closest("[data-dismiss]")) { t.closest("[data-dismiss]").parentElement.remove(); return; }
+  if (t.matches("[data-select]")) { t.select(); return; }
+  const row = t.closest("[data-href]");
+  if (row && !t.closest("a, button, input, select, textarea, label, form")) location.href = row.dataset.href;
+});
+
+// ---- Certificat : la feuille A4 s'adapte à la largeur de l'écran (téléphone, tablette)
+(() => {
+  const sheet = document.querySelector(".sheet");
+  if (!sheet) return;
+  const fit = () => {
+    sheet.style.transform = "";
+    sheet.style.marginLeft = sheet.style.marginBottom = "";
+    const k = Math.min(1, (document.documentElement.clientWidth - 16) / sheet.offsetWidth);
+    if (k < 1) {
+      sheet.style.transformOrigin = "top left";
+      sheet.style.transform = `scale(${k})`;
+      sheet.style.marginLeft = "8px";
+      sheet.style.marginBottom = `${-(1 - k) * sheet.offsetHeight}px`;
+    }
+  };
+  fit();
+  window.addEventListener("resize", fit);
+})();

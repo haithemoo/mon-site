@@ -15,7 +15,7 @@
 </style>  <meta name="robots" content="noindex, nofollow">
 </head><body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
 <a href="accueil.html">Site public</a> · <a href="espace.html">Espace élève</a> · <a href="admin.html">Administration</a></div>
-<div class="toolbar"><button onclick="window.print()">Imprimer le reçu</button></div>
+<div class="toolbar"><button data-print>Imprimer le reçu</button></div>
 <div class="r">
   <div class="top"><img src="logo-cfp.webp" alt="CFP Academy"><div style="text-align:right"><h1>Reçu de paiement</h1><div class="muted">N° R-2026-00001 · 02/11/2026</div></div></div>
   <p class="muted" style="margin-top:4mm">Rue Nelson Mandela, Passage Lafayette, 1er étage N°44 — Tunis Centre Ville<br>Tél. 55 366 216 / 28 732 012 / 36 670 406</p>
@@ -30,4 +30,14 @@
   </table>
   <div class="amount">400 DT</div>
   <div class="sign"><span>Signature de l'élève</span><span>Cachet et signature du centre</span></div>
-</div></body></html>
+</div><script src="main.js"></script><script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
+  var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
+  var f = document.createElement('div'); f.className = 'flash info';
+  f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';
+  box.appendChild(f); setTimeout(function () { f.remove(); }, 4000);
+}, true);
+</script>
+</body></html>

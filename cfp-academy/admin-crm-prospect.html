@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin-crm-prospect.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
-  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -46,6 +46,8 @@
 </svg>Inscriptions<span class="count">3</span></a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
+    <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+</svg>Finances</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-messages.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
@@ -77,6 +79,10 @@
   <nav class="side-nav">
     <a href="admin-site.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Gestion du site</a>
+    <a href="admin-etat.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg>État du site</a>
+    <a href="admin-aide.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg>Aide</a>
   </nav>
 </div>
 
@@ -90,7 +96,7 @@
 </svg>Voir le site</a>
         <a href="admin-crm-prospect.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -114,13 +120,13 @@
 
 
 <div class="stepper" aria-label="Étapes">
-  <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="status" value="nouveau"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  done">Nouveau</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="status" value="contacte"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill on ">Contacté</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="status" value="interesse"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  ">Intéressé</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="status" value="inscrit"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  ">Inscrit</button></form>
-  <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="status" value="perdu"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill lost ">Perdu</button></form>
+  <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="status" value="nouveau"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  done">Nouveau</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="status" value="contacte"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill on ">Contacté</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="status" value="interesse"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  ">Intéressé</button></form><form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="status" value="inscrit"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill  ">Inscrit</button></form>
+  <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="status" value="perdu"><input type="hidden" name="back" value="/admin/crm/10"><button class="step-pill lost ">Perdu</button></form>
 </div>
 
 <div class="two-col">
   <div class="stack">
-    <form method="post" class="card" id="echange"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="interaction">
+    <form method="post" class="card" id="echange"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="interaction">
       <h3>Nouvel échange</h3>
       <div class="kind-pick"><label><input type="radio" name="kind" value="appel" checked><span>Appel</span></label><label><input type="radio" name="kind" value="whatsapp" ><span>WhatsApp</span></label><label><input type="radio" name="kind" value="rdv" ><span>Rendez-vous</span></label><label><input type="radio" name="kind" value="visite" ><span>Visite</span></label><label><input type="radio" name="kind" value="sms" ><span>SMS</span></label><label><input type="radio" name="kind" value="email" ><span>E-mail</span></label><label><input type="radio" name="kind" value="note" ><span>Note</span></label></div>
       <label for="i-body" class="sr-only">Compte rendu</label><textarea id="i-body" name="body" rows="3" required placeholder="Ex. : rappelé, intéressée par la session de janvier, souhaite connaître le prix…"></textarea>
@@ -138,7 +144,7 @@
         <li class="tl-appel"><span class="tl-dot"></span>
           <div><span class="small muted">04/11/2026 11:30 · <b>Appel</b> · Karim</span>
             <p>Appel : intéressé par la session du soir, rappeler après le 10.</p></div>
-          <form method="post" onsubmit="return confirm('Supprimer cet échange ?')"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="delete_interaction"><input type="hidden" name="iid" value="13"><button class="icon-btn" aria-label="Supprimer">×</button></form>
+          <form method="post" data-confirm="Supprimer cet échange ?"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="delete_interaction"><input type="hidden" name="iid" value="13"><button class="icon-btn" aria-label="Supprimer">×</button></form>
         </li>
         
       </ol>
@@ -146,7 +152,7 @@
   </div>
   <div class="stack">
     
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="save">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="save">
       <h3>Fiche du prospect</h3>
       
 
@@ -166,7 +172,7 @@
   <div class="full lost-field"><label for="p-lost">Raison de la perte (si « Perdu »)</label><input id="p-lost" name="lost_reason" list="p-reasons" value=""><datalist id="p-reasons"><option value="Prix trop élevé"><option value="Horaires incompatibles"><option value="Inscrit ailleurs"><option value="Ne répond plus"><option value="Projet reporté"></datalist></div>
 </div>
       <div class="actions" style="margin-top:1rem;justify-content:space-between"><button class="btn btn-primary">Enregistrer</button>
-        <button class="btn btn-danger" name="action" value="delete" formnovalidate onclick="return confirm('Supprimer ce prospect et son historique ?')">Supprimer</button></div>
+        <button class="btn btn-danger" name="action" value="delete" formnovalidate data-confirm="Supprimer ce prospect et son historique ?">Supprimer</button></div>
     </form>
   </div>
 </div>

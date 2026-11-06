@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin-eleves.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
-  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -46,6 +46,8 @@
 </svg>Inscriptions<span class="count">3</span></a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
+    <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+</svg>Finances</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-messages.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
@@ -77,6 +79,10 @@
   <nav class="side-nav">
     <a href="admin-site.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Gestion du site</a>
+    <a href="admin-etat.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg>État du site</a>
+    <a href="admin-aide.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg>Aide</a>
   </nav>
 </div>
 
@@ -90,7 +96,7 @@
 </svg>Voir le site</a>
         <a href="admin-eleves.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -118,279 +124,279 @@
     <thead><tr><th>Élève</th><th>Téléphone</th><th>Ville</th><th>Formations</th><th>Inscrit le</th><th>Compte</th></tr></thead>
     <tbody>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#2'">
-        <td><a class="name" href="admin-eleve.html">Ben Salah Amira</a><br><span class="small muted">amira.demo@example.com</span></td>
-        <td><a href="tel:+21655000000" onclick="event.stopPropagation()">+216 55 000 000</a></td>
-        <td>Tunis</td>
-        <td>1</td>
-        <td class="small">06/11/2026 12:22</td>
-        <td><span class="badge b-confirmee">Actif</span></td>
-      </tr>
-    
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#3'">
-        <td><a class="name" href="admin-eleve.html">Trabelsi Yassine</a><br><span class="small muted">yassine.demo@example.com</span></td>
-        <td><a href="tel:+21655000001" onclick="event.stopPropagation()">+216 55 000 001</a></td>
-        <td>Tunis</td>
-        <td>1</td>
-        <td class="small">06/11/2026 12:22</td>
-        <td><span class="badge b-confirmee">Actif</span></td>
-      </tr>
-    
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#4'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Gharbi Nour</a><br><span class="small muted">nour.demo@example.com</span></td>
-        <td><a href="tel:+21655000002" onclick="event.stopPropagation()">+216 55 000 002</a></td>
+        <td><a href="tel:+21655000002">+216 55 000 002</a></td>
         <td>Tunis</td>
         <td>1</td>
-        <td class="small">06/11/2026 12:22</td>
+        <td class="small">06/11/2026 12:46</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#5'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Jlassi Sarra</a><br><span class="small muted">sarra.demo@example.com</span></td>
-        <td><a href="tel:+21655000003" onclick="event.stopPropagation()">+216 55 000 003</a></td>
+        <td><a href="tel:+21655000003">+216 55 000 003</a></td>
         <td>Tunis</td>
         <td>1 <span class="badge b-en_attente">1 en attente</span></td>
-        <td class="small">06/11/2026 12:22</td>
+        <td class="small">06/11/2026 12:46</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#6'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Ayari Mehdi</a><br><span class="small muted">mehdi.demo@example.com</span></td>
-        <td><a href="tel:+21655000004" onclick="event.stopPropagation()">+216 55 000 004</a></td>
+        <td><a href="tel:+21655000004">+216 55 000 004</a></td>
         <td>Tunis</td>
         <td>1 <span class="badge b-en_attente">1 en attente</span></td>
-        <td class="small">06/11/2026 12:22</td>
+        <td class="small">06/11/2026 12:46</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#7'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Mansouri Ines</a><br><span class="small muted">ines.demo@example.com</span></td>
-        <td><a href="tel:+21655000005" onclick="event.stopPropagation()">+216 55 000 005</a></td>
+        <td><a href="tel:+21655000005">+216 55 000 005</a></td>
         <td>Tunis</td>
         <td>1</td>
-        <td class="small">06/11/2026 12:22</td>
+        <td class="small">06/11/2026 12:46</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#8'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Ferchichi Karim</a><br><span class="small muted">karim.demo@example.com</span></td>
-        <td><a href="tel:+21655000006" onclick="event.stopPropagation()">+216 55 000 006</a><br><span class="badge b-en_attente">Non vérifié</span></td>
+        <td><a href="tel:+21655000006">+216 55 000 006</a><br><span class="badge b-en_attente">Non vérifié</span></td>
         <td>Tunis</td>
         <td>1 <span class="badge b-en_attente">1 en attente</span></td>
-        <td class="small">06/11/2026 12:22</td>
+        <td class="small">06/11/2026 12:46</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#32'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
+        <td><a class="name" href="admin-eleve.html">Ben Salah Amira</a><br><span class="small muted">amira.demo@example.com</span></td>
+        <td><a href="tel:+21655000000">+216 55 000 000</a></td>
+        <td>Tunis</td>
+        <td>1</td>
+        <td class="small">06/11/2026 12:46</td>
+        <td><span class="badge b-confirmee">Actif</span></td>
+      </tr>
+    
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
+        <td><a class="name" href="admin-eleve.html">Trabelsi Yassine</a><br><span class="small muted">yassine.demo@example.com</span></td>
+        <td><a href="tel:+21655000001">+216 55 000 001</a></td>
+        <td>Tunis</td>
+        <td>1</td>
+        <td class="small">06/11/2026 12:46</td>
+        <td><span class="badge b-confirmee">Actif</span></td>
+      </tr>
+    
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Labidi Amine</a><br><span class="small muted">amine.23@example.com</span></td>
-        <td><a href="tel:+21626123223" onclick="event.stopPropagation()">26 123 223</a></td>
+        <td><a href="tel:+21626123223">26 123 223</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">06/11/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#31'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Saidi Dorra</a><br><span class="small muted">dorra.22@example.com</span></td>
-        <td><a href="tel:+21625122222" onclick="event.stopPropagation()">25 122 222</a></td>
+        <td><a href="tel:+21625122222">25 122 222</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">15/10/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#30'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Ouni Nesrine</a><br><span class="small muted">nesrine.21@example.com</span></td>
-        <td><a href="tel:+21624121221" onclick="event.stopPropagation()">24 121 221</a></td>
+        <td><a href="tel:+21624121221">24 121 221</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">10/10/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#28'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Hamdi Chaima</a><br><span class="small muted">chaima.19@example.com</span></td>
-        <td><a href="tel:+21622119219" onclick="event.stopPropagation()">22 119 219</a></td>
+        <td><a href="tel:+21622119219">22 119 219</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">20/09/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#29'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Nasri Firas</a><br><span class="small muted">firas.20@example.com</span></td>
-        <td><a href="tel:+21623120220" onclick="event.stopPropagation()">23 120 220</a></td>
+        <td><a href="tel:+21623120220">23 120 220</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">05/09/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#27'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Haddad Lina</a><br><span class="small muted">lina.18@example.com</span></td>
-        <td><a href="tel:+21621118218" onclick="event.stopPropagation()">21 118 218</a></td>
+        <td><a href="tel:+21621118218">21 118 218</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">16/08/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#26'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Masmoudi Skander</a><br><span class="small muted">skander.17@example.com</span></td>
-        <td><a href="tel:+21629117217" onclick="event.stopPropagation()">29 117 217</a></td>
+        <td><a href="tel:+21629117217">29 117 217</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">11/08/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#24'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Baccar Malek</a><br><span class="small muted">malek.15@example.com</span></td>
-        <td><a href="tel:+21627115215" onclick="event.stopPropagation()">27 115 215</a></td>
+        <td><a href="tel:+21627115215">27 115 215</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">22/07/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#25'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Arfaoui Yosra</a><br><span class="small muted">yosra.16@example.com</span></td>
-        <td><a href="tel:+21628116216" onclick="event.stopPropagation()">28 116 216</a></td>
+        <td><a href="tel:+21628116216">28 116 216</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">07/07/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#23'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Ghanmi Sana</a><br><span class="small muted">sana.14@example.com</span></td>
-        <td><a href="tel:+21626114214" onclick="event.stopPropagation()">26 114 214</a></td>
+        <td><a href="tel:+21626114214">26 114 214</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">17/06/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#22'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Toumi Ons</a><br><span class="small muted">ons.13@example.com</span></td>
-        <td><a href="tel:+21625113213" onclick="event.stopPropagation()">25 113 213</a></td>
+        <td><a href="tel:+21625113213">25 113 213</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">12/06/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#20'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Jebali Houda</a><br><span class="small muted">houda.11@example.com</span></td>
-        <td><a href="tel:+21623111211" onclick="event.stopPropagation()">23 111 211</a></td>
+        <td><a href="tel:+21623111211">23 111 211</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">23/05/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#21'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Bouzid Anis</a><br><span class="small muted">anis.12@example.com</span></td>
-        <td><a href="tel:+21624112212" onclick="event.stopPropagation()">24 112 212</a></td>
+        <td><a href="tel:+21624112212">24 112 212</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">08/05/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#19'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Sassi Mariem</a><br><span class="small muted">mariem.10@example.com</span></td>
-        <td><a href="tel:+21622110210" onclick="event.stopPropagation()">22 110 210</a></td>
+        <td><a href="tel:+21622110210">22 110 210</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">18/04/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#18'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Kefi Oussama</a><br><span class="small muted">oussama.9@example.com</span></td>
-        <td><a href="tel:+21621109209" onclick="event.stopPropagation()">21 109 209</a></td>
+        <td><a href="tel:+21621109209">21 109 209</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">13/04/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#16'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Zouari Emna</a><br><span class="small muted">emna.7@example.com</span></td>
-        <td><a href="tel:+21628107207" onclick="event.stopPropagation()">28 107 207</a></td>
+        <td><a href="tel:+21628107207">28 107 207</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">24/03/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#17'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Mejri Fatma</a><br><span class="small muted">fatma.8@example.com</span></td>
-        <td><a href="tel:+21629108208" onclick="event.stopPropagation()">29 108 208</a></td>
+        <td><a href="tel:+21629108208">29 108 208</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">09/03/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#15'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Ben Amor Wael</a><br><span class="small muted">wael.6@example.com</span></td>
-        <td><a href="tel:+21627106206" onclick="event.stopPropagation()">27 106 206</a></td>
+        <td><a href="tel:+21627106206">27 106 206</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">17/02/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#14'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Dridi Asma</a><br><span class="small muted">asma.5@example.com</span></td>
-        <td><a href="tel:+21626105205" onclick="event.stopPropagation()">26 105 205</a></td>
+        <td><a href="tel:+21626105205">26 105 205</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">12/02/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#12'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Chaabane Rim</a><br><span class="small muted">rim.3@example.com</span></td>
-        <td><a href="tel:+21624103203" onclick="event.stopPropagation()">24 103 203</a></td>
+        <td><a href="tel:+21624103203">24 103 203</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">23/01/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#13'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Hammami Bilel</a><br><span class="small muted">bilel.4@example.com</span></td>
-        <td><a href="tel:+21625104204" onclick="event.stopPropagation()">25 104 204</a></td>
+        <td><a href="tel:+21625104204">25 104 204</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">08/01/2026 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#11'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Bouazizi Salma</a><br><span class="small muted">salma.2@example.com</span></td>
-        <td><a href="tel:+21623102202" onclick="event.stopPropagation()">23 102 202</a></td>
+        <td><a href="tel:+21623102202">23 102 202</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">19/12/2025 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#10'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Riahi Aymen</a><br><span class="small muted">aymen.1@example.com</span></td>
-        <td><a href="tel:+21622101201" onclick="event.stopPropagation()">22 101 201</a></td>
+        <td><a href="tel:+21622101201">22 101 201</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">14/12/2025 10:00</td>
         <td><span class="badge b-confirmee">Actif</span></td>
       </tr>
     
-      <tr style="cursor:pointer" onclick="location='admin-eleve.html#9'">
+      <tr style="cursor:pointer" data-href="admin-eleve.html">
         <td><a class="name" href="admin-eleve.html">Khelifi Hiba</a><br><span class="small muted">hiba.0@example.com</span></td>
-        <td><a href="tel:+21621100200" onclick="event.stopPropagation()">21 100 200</a></td>
+        <td><a href="tel:+21621100200">21 100 200</a></td>
         <td>Tunis</td>
         <td>1</td>
         <td class="small">09/12/2025 10:00</td>

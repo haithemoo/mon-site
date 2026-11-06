@@ -14,7 +14,7 @@
   <link rel="alternate" hreflang="ar" href="admin-groupe.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0b1d5c">
-  <script>try{if(localStorage.getItem('cfp-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -46,6 +46,8 @@
 </svg>Inscriptions<span class="count">3</span></a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
+    <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+</svg>Finances</a>
     <a href="admin-presences.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
 </svg>Présences</a>
     <a href="admin-messages.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-8h12l3 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M3 13h5l1 3h6l1-3h5"/>
@@ -77,6 +79,10 @@
   <nav class="side-nav">
     <a href="admin-site.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Gestion du site</a>
+    <a href="admin-etat.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+</svg>État du site</a>
+    <a href="admin-aide.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
+</svg>Aide</a>
   </nav>
 </div>
 
@@ -90,7 +96,7 @@
 </svg>Voir le site</a>
         <a href="admin-groupe.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -106,7 +112,7 @@
 </svg>Faire l'appel</a></div></div>
 <div class="two-col">
   <div class="stack">
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="members">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="members">
       <div class="card-head"><h3>Élèves</h3><span class="small muted">Cochez les élèves de ce groupe</span></div>
       <div class="table-wrap"><table>
         <thead><tr><th></th><th>Élève</th><th>Assiduité</th><th>Moyenne</th><th>Certificat</th></tr></thead>
@@ -133,7 +139,7 @@
       <div class="actions" style="margin-top:1rem"><button class="btn btn-primary btn-sm">Enregistrer la liste</button></div>
     </form>
     
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="grades">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="grades">
       <h3>Saisir des notes</h3>
       <div class="form-grid">
         <div><label for="gr-title">Évaluation</label><input id="gr-title" name="title" required placeholder="Ex. : Examen pratique"></div>
@@ -147,7 +153,7 @@
     <div class="card"><h3>Évaluations du groupe</h3><ul class="mini-list"><li><span><b>Test de colorimétrie</b> <span class="small muted">· 29/10/2026 · 3 note(s)</span></span><b>14.7 / 20</b></li></ul></div>
   </div>
   <div class="stack">
-    <form method="post" class="card"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="save">
+    <form method="post" class="card"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="save">
       <h3>Session</h3>
       <div class="form-grid">
         <div class="full"><label for="gs-name">Nom</label><input id="gs-name" name="name" value="Session octobre 2026"></div>
@@ -163,11 +169,11 @@
     </form>
     <div class="card">
       <h3>Fin de session</h3>
-      <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="certify">
+      <form method="post" class="inline-form"><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="certify">
         <div><label for="gc-kind">Délivrer à tous les élèves du groupe</label><select id="gc-kind" name="kind"><option value="attestation">Attestation de formation</option><option value="certificat">Certificat de formation</option><option value="reussite">Attestation de réussite</option></select></div>
         <button class="btn btn-light btn-sm">Délivrer les certificats</button></form>
-      <form method="post" style="margin-top:1rem" onsubmit="return confirm('Clôturer la session ? Les formations en cours passeront en « Terminée ».')"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="finish"><button class="btn btn-light btn-sm">Clôturer la session</button></form>
-      <form method="post" style="margin-top:1rem" onsubmit="return confirm('Supprimer ce groupe ? Les inscriptions sont conservées.')"><input type="hidden" name="_csrf" value="tLJeElI3iyhZnc7lESsD9N-uS3pc3VD7ZELTFG4mVes"><input type="hidden" name="action" value="delete"><button class="btn btn-danger btn-sm">Supprimer le groupe</button></form>
+      <form method="post" style="margin-top:1rem" data-confirm="Clôturer la session ? Les formations en cours passeront en « Terminée »."><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="finish"><button class="btn btn-light btn-sm">Clôturer la session</button></form>
+      <form method="post" style="margin-top:1rem" data-confirm="Supprimer ce groupe ? Les inscriptions sont conservées."><input type="hidden" name="_csrf" value="o-WLbRaZZhnBSO3JeIIKHjJ3PhY-zdBtyL_rWLWiI74"><input type="hidden" name="action" value="delete"><button class="btn btn-danger btn-sm">Supprimer le groupe</button></form>
     </div>
   </div>
 </div>
