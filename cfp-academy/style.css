@@ -987,3 +987,20 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .parcours-card .ok { color: #1f8a5b; font-weight: 700; }
 .parcours-card .todo { color: #b45309; font-weight: 700; }
 .parcours-card ul { margin: .3rem 0 0; padding-inline-start: 1.1rem; }
+
+/* Administration → Formations : une ligne éditable par formation */
+.course-line { display: grid; grid-template-columns: minmax(200px, 2.2fr) minmax(130px, 1.1fr) minmax(110px, 1fr) minmax(100px, .8fr) auto auto; gap: .6rem .8rem; align-items: end; }
+.course-line label { font-size: .78rem; }
+.course-row-edit { grid-template-columns: 1fr auto; padding: .7rem 0; border-top: 1px solid var(--line); }
+.course-row-edit:first-of-type { border-top: 0; }
+.course-row-edit > form.course-line { grid-column: 1; }
+.course-add .course-line { grid-template-columns: minmax(200px, 2.2fr) minmax(150px, 1.3fr) minmax(130px, 1.1fr) minmax(110px, 1fr) minmax(110px, .9fr) auto; }
+.cl-vis { display: flex; flex-direction: column; gap: .2rem; padding-bottom: .3rem; }
+.cl-btn { display: flex; gap: .4rem; flex-wrap: wrap; }
+.cl-del { align-self: end; }
+.cl-del button[disabled] { opacity: .4; cursor: not-allowed; }
+@media (max-width: 1100px) {
+  .course-line, .course-add .course-line { grid-template-columns: 1fr 1fr; }
+  .course-line .cl-title { grid-column: 1 / -1; }
+  .course-row-edit { grid-template-columns: 1fr; }
+}
