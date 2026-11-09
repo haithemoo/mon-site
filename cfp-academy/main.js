@@ -21,22 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Catalogue : filtrage des sections sans rechargement (marche aussi sur l'aperçu statique)
+// Catalogue : vue d'ensemble des sections, les formations d'une section s'affichent quand on la choisit
+// (onglet ou carte), sans rechargement — marche aussi sur l'aperçu statique.
 (function () {
   const chips = document.getElementById('chips');
   if (!chips) return;
   const sections = document.querySelectorAll('[data-section]');
+  const overview = document.getElementById('cat-overview');
+  const active = chips.querySelector('.chip.active');
+  let current = active ? (active.dataset.filter || '') : '';
   function apply(key) {
-    sections.forEach((s) => { s.hidden = !!key && s.dataset.section !== key; });
-    chips.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', (c.dataset.filter || '') === (key || '')));
+    current = key || '';
+    if (overview) overview.hidden = !!current;
+    sections.forEach((s) => { s.hidden = s.dataset.section !== current; });
+    chips.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', (c.dataset.filter || '') === current));
+  }
+  function open(key, scroll) {
+    apply(key);
+    try { history.replaceState(null, '', key ? '#' + key : location.pathname); } catch (err) {}
+    if (scroll) window.scrollTo({ top: chips.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth' });  // sous l'en-tête fixe
   }
   chips.addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
     if (!chip) return;
     e.preventDefault();
-    apply(chip.dataset.filter);
-    try { history.replaceState(null, '', chip.dataset.filter ? '#' + chip.dataset.filter : location.pathname); } catch (err) {}
+    open(chip.dataset.filter, false);
   });
+  if (overview) overview.addEventListener('click', (e) => {
+    const card = e.target.closest('[data-open]');
+    if (!card) return;
+    e.preventDefault();
+    open(card.dataset.open, true);
+  });
+  window.cfpCatalogue = { restore: () => apply(current) };
   const hash = location.hash.slice(1);
   if (hash && document.querySelector('[data-section="' + hash + '"]')) apply(hash);
 })();
@@ -175,9 +192,14 @@ document.querySelectorAll(".theme-toggle").forEach((btn) => {
       if (q) sec.hidden = n === 0;
       shown += n;
     });
-    if (q && chips) chips.querySelectorAll(".chip").forEach((c) => c.classList.toggle("active", !c.dataset.filter));
-    if (!q) document.querySelectorAll(".course-section").forEach((sec) => { sec.hidden = false; });
-    if (none) none.hidden = shown > 0;
+    const overview = document.getElementById("cat-overview");
+    if (q) {
+      if (overview) overview.hidden = true;  // la recherche parcourt toutes les sections
+      if (chips) chips.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+    } else if (window.cfpCatalogue) {
+      window.cfpCatalogue.restore();
+    }
+    if (none) none.hidden = !q || shown > 0;
   });
 })();
 

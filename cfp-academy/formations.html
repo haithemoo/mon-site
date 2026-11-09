@@ -88,12 +88,59 @@
     </div>
     <p class="empty" id="course-none" hidden>Aucune formation ne correspond à votre recherche.</p>
     <div class="chips" id="chips">
-      <a class="chip active" data-filter="" href="formations.html">Toutes</a>
+      <a class="chip active" data-filter="" href="formations.html">Toutes les sections</a>
       <a class="chip " data-filter="cat-beaute" href="formations.html#cat-beaute">Coiffure &amp; Esthétique femme</a><a class="chip " data-filter="cat-homme" href="formations.html#cat-homme">Coiffure homme</a><a class="chip " data-filter="cat-bureau" href="formations.html#cat-bureau">Bureautique &amp; Secrétariat</a><a class="chip " data-filter="cat-compta" href="formations.html#cat-compta">Comptabilité &amp; Finance</a><a class="chip " data-filter="cat-info" href="formations.html#cat-info">Maintenance informatique</a><a class="chip " data-filter="cat-langues" href="formations.html#cat-langues">Langues</a><a class="chip " data-filter="cat-coaching" href="formations.html#cat-coaching">Coaching</a><a class="chip " data-filter="cat-startup" href="formations.html#cat-startup">Startup &amp; Marketing</a>
     </div>
     
-    <div class="course-section" id="cat-beaute" data-section="cat-beaute"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-beaute.webp?v=1794211460" alt="" loading="lazy" width="48" height="48">Coiffure &amp; Esthétique femme</h2>
+    <div class="cat-overview" id="cat-overview" >
+      <p class="cat-overview-hint">Choisissez une section pour voir ses formations.</p>
+      <div class="cat-cards">
+      
+        <a class="cat-card cat-beaute" data-open="cat-beaute" href="formations.html#cat-beaute">
+          <img class="cat-photo cat-card-photo" src="sections/cat-beaute.webp?v=1794211460" alt="" loading="lazy" width="96" height="96">
+          <span><b>Coiffure &amp; Esthétique femme</b><small>11 formations</small></span>
+        </a>
+      
+        <a class="cat-card cat-homme" data-open="cat-homme" href="formations.html#cat-homme">
+          <img class="cat-photo cat-card-photo" src="sections/cat-homme.webp?v=1794211461" alt="" loading="lazy" width="96" height="96">
+          <span><b>Coiffure homme</b><small>1 formation</small></span>
+        </a>
+      
+        <a class="cat-card cat-bureau" data-open="cat-bureau" href="formations.html#cat-bureau">
+          <img class="cat-photo cat-card-photo" src="sections/cat-bureau.webp?v=1794211462" alt="" loading="lazy" width="96" height="96">
+          <span><b>Bureautique &amp; Secrétariat</b><small>1 formation</small></span>
+        </a>
+      
+        <a class="cat-card cat-compta" data-open="cat-compta" href="formations.html#cat-compta">
+          <img class="cat-photo cat-card-photo" src="sections/cat-compta.webp?v=1794211462" alt="" loading="lazy" width="96" height="96">
+          <span><b>Comptabilité &amp; Finance</b><small>1 formation</small></span>
+        </a>
+      
+        <a class="cat-card cat-info" data-open="cat-info" href="formations.html#cat-info">
+          <img class="cat-photo cat-card-photo" src="sections/cat-info.webp?v=1794211463" alt="" loading="lazy" width="96" height="96">
+          <span><b>Maintenance informatique</b><small>1 formation</small></span>
+        </a>
+      
+        <a class="cat-card cat-langues" data-open="cat-langues" href="formations.html#cat-langues">
+          <img class="cat-photo cat-card-photo" src="sections/cat-langues.webp?v=1794211464" alt="" loading="lazy" width="96" height="96">
+          <span><b>Langues</b><small>4 formations</small></span>
+        </a>
+      
+        <a class="cat-card cat-coaching" data-open="cat-coaching" href="formations.html#cat-coaching">
+          <img class="cat-photo cat-card-photo" src="sections/cat-coaching.webp?v=1794211464" alt="" loading="lazy" width="96" height="96">
+          <span><b>Coaching</b><small>1 formation</small></span>
+        </a>
+      
+        <a class="cat-card cat-startup" data-open="cat-startup" href="formations.html#cat-startup">
+          <img class="cat-photo cat-card-photo" src="sections/cat-startup.webp?v=1794211465" alt="" loading="lazy" width="96" height="96">
+          <span><b>Startup &amp; Marketing</b><small>1 formation</small></span>
+        </a>
+      
+      </div>
+    </div>
+    
+    <div class="course-section" id="cat-beaute" data-section="cat-beaute" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-beaute.webp?v=1794211460" alt="" loading="lazy" width="72" height="72">Coiffure &amp; Esthétique femme</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-brushing-professionnel.html">
   <span class="row-ico cat-beaute has-photo"><img class="cat-photo" src="sections/cat-beaute.webp?v=1794211460" alt="" loading="lazy"></span>
@@ -186,8 +233,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-homme" data-section="cat-homme"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-homme.webp?v=1794211461" alt="" loading="lazy" width="48" height="48">Coiffure homme</h2>
+    <div class="course-section" id="cat-homme" data-section="cat-homme" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-homme.webp?v=1794211461" alt="" loading="lazy" width="72" height="72">Coiffure homme</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-coiffure-homme-degrade.html">
   <span class="row-ico cat-homme has-photo"><img class="cat-photo" src="sections/cat-homme.webp?v=1794211461" alt="" loading="lazy"></span>
@@ -200,8 +247,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-bureau" data-section="cat-bureau"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-bureau.webp?v=1794211462" alt="" loading="lazy" width="48" height="48">Bureautique &amp; Secrétariat</h2>
+    <div class="course-section" id="cat-bureau" data-section="cat-bureau" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-bureau.webp?v=1794211462" alt="" loading="lazy" width="72" height="72">Bureautique &amp; Secrétariat</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-bureautique-secretariat.html">
   <span class="row-ico cat-bureau has-photo"><img class="cat-photo" src="sections/cat-bureau.webp?v=1794211462" alt="" loading="lazy"></span>
@@ -214,8 +261,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-compta" data-section="cat-compta"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-compta.webp?v=1794211462" alt="" loading="lazy" width="48" height="48">Comptabilité &amp; Finance</h2>
+    <div class="course-section" id="cat-compta" data-section="cat-compta" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-compta.webp?v=1794211462" alt="" loading="lazy" width="72" height="72">Comptabilité &amp; Finance</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-comptabilite-finance.html">
   <span class="row-ico cat-compta has-photo"><img class="cat-photo" src="sections/cat-compta.webp?v=1794211462" alt="" loading="lazy"></span>
@@ -228,8 +275,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-info" data-section="cat-info"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-info.webp?v=1794211463" alt="" loading="lazy" width="48" height="48">Maintenance informatique</h2>
+    <div class="course-section" id="cat-info" data-section="cat-info" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-info.webp?v=1794211463" alt="" loading="lazy" width="72" height="72">Maintenance informatique</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-maintenance-informatique.html">
   <span class="row-ico cat-info has-photo"><img class="cat-photo" src="sections/cat-info.webp?v=1794211463" alt="" loading="lazy"></span>
@@ -242,8 +289,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-langues" data-section="cat-langues"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-langues.webp?v=1794211464" alt="" loading="lazy" width="48" height="48">Langues</h2>
+    <div class="course-section" id="cat-langues" data-section="cat-langues" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-langues.webp?v=1794211464" alt="" loading="lazy" width="72" height="72">Langues</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-langue-francais.html">
   <span class="row-ico cat-langues has-photo"><img class="cat-photo" src="sections/cat-langues.webp?v=1794211464" alt="" loading="lazy"></span>
@@ -280,8 +327,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-coaching" data-section="cat-coaching"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-coaching.webp?v=1794211464" alt="" loading="lazy" width="48" height="48">Coaching</h2>
+    <div class="course-section" id="cat-coaching" data-section="cat-coaching" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-coaching.webp?v=1794211464" alt="" loading="lazy" width="72" height="72">Coaching</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-coaching.html">
   <span class="row-ico cat-coaching has-photo"><img class="cat-photo" src="sections/cat-coaching.webp?v=1794211464" alt="" loading="lazy"></span>
@@ -294,8 +341,8 @@
 </a></div>
     </div>
     
-    <div class="course-section" id="cat-startup" data-section="cat-startup"  style="margin-bottom:2.8rem">
-      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-startup.webp?v=1794211465" alt="" loading="lazy" width="48" height="48">Startup &amp; Marketing</h2>
+    <div class="course-section" id="cat-startup" data-section="cat-startup" hidden style="margin-bottom:2.8rem">
+      <h2 style="font-size:1.8rem;display:flex;align-items:center;gap:.7rem"><img class="cat-photo h2-photo" src="sections/cat-startup.webp?v=1794211465" alt="" loading="lazy" width="72" height="72">Startup &amp; Marketing</h2>
       
       <div class="course-rows"><a class="course-row" href="formation-startup-marketing.html">
   <span class="row-ico cat-startup has-photo"><img class="cat-photo" src="sections/cat-startup.webp?v=1794211465" alt="" loading="lazy"></span>
@@ -350,6 +397,6 @@
   
   <a class="wa-float" href="https://wa.me/21655366216" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.5-.3z"/></svg></a>
   
-  <script src="/static/js/main.js?v=1793965613"></script>
+  <script src="/static/js/main.js?v=1794211854"></script>
 </body>
 </html>
