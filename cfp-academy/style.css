@@ -933,3 +933,6 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .reg-dl-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
 .reg-dl-row svg { width: 18px; height: 18px; flex: none; }
 .reg-dl + .reg-dl { margin-top: .5rem; }
+.doc-links { display: grid; gap: .5rem; }
+.doc-links .btn { justify-content: flex-start; white-space: normal; text-align: start; }
+.doc-links svg { width: 18px; height: 18px; flex: none; }

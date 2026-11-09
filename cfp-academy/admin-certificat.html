@@ -1,60 +1,74 @@
 <!doctype html>
+
+
+
+
+
+
 <html lang="fr">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CFP-2026-0001 — Hiba Khelifi</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   @page { size: A4 landscape; margin: 0; }
   * { box-sizing: border-box; }
-  body { margin: 0; background: #e8ecf8; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: #0b1d5c; }
+  body { margin: 0; background: #e8ecf8; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: #0b1d5c; overflow-x: hidden; }
   .toolbar { display: flex; gap: .6rem; justify-content: center; padding: 1rem; }
   .toolbar button, .toolbar a { font: 700 .9rem inherit; padding: .7em 1.3em; border-radius: 999px; border: 1px solid #c9d2ef; background: #fff; color: #0b1d5c; cursor: pointer; text-decoration: none; }
   .toolbar button { background: #1238c4; color: #fff; border: 0; }
-  .sheet { width: 297mm; height: 210mm; margin: 0 auto 2rem; background: #fff; position: relative; padding: 14mm; box-shadow: 0 20px 60px -20px rgba(11,29,92,.35); }
-  .frame { height: 100%; border: 2.5px solid #c99a2e; outline: 1px solid #c99a2e; outline-offset: -8px; padding: 10mm 16mm; display: grid; grid-template-rows: auto 1fr auto; text-align: center; position: relative; }
-  .frame::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, rgba(18,56,196,.05), transparent 60%); pointer-events: none; }
-  .head { display: flex; align-items: center; justify-content: space-between; }
-  .head img { height: 30mm; }
-  .head .ar { font-family: Amiri, serif; font-size: 15pt; direction: rtl; color: #9a6a0a; }
-  .brand { font-family: Cinzel, serif; font-size: 18pt; letter-spacing: .06em; color: #1238c4; }
-  h1 { font-family: "Playfair Display", serif; font-size: 34pt; margin: 6mm 0 1mm; letter-spacing: .02em; }
-  h1 + .ar { font-family: Amiri, serif; font-size: 20pt; color: #9a6a0a; direction: rtl; margin: 0 0 5mm; }
-  .lead { font-size: 12pt; color: #3f4a6e; margin: 0; }
-  .name { font-family: "Playfair Display", serif; font-size: 30pt; margin: 3mm 0; border-bottom: 1px solid #e3b341; display: inline-block; padding: 0 10mm 2mm; }
-  .course { font-size: 16pt; font-weight: 700; color: #1238c4; margin: 2mm 0; }
-  .course-ar { font-family: Amiri, serif; font-size: 16pt; direction: rtl; margin: 0; }
-  .meta { font-size: 10.5pt; color: #3f4a6e; margin-top: 3mm; }
-  .foot { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; font-size: 9.5pt; color: #3f4a6e; }
-  .sign { border-top: 1px solid #0b1d5c; padding-top: 2mm; width: 60mm; margin: 0 auto; }
-  .verify { text-align: start; } .verify b { color: #0b1d5c; }
-  .seal { width: 26mm; height: 26mm; border-radius: 50%; border: 2px solid #c99a2e; display: grid; place-items: center; margin: 0 auto; font-family: Cinzel, serif; font-size: 8pt; color: #9a6a0a; line-height: 1.2; }
-  .revoked { position: absolute; inset: 0; display: grid; place-items: center; font: 800 60pt "Plus Jakarta Sans"; color: rgba(229,72,77,.25); transform: rotate(-18deg); }
-  body { overflow-x: hidden; }
+  .sheet { position: relative; width: 297mm; height: 210mm; margin: 0 auto 2rem; overflow: hidden; background: #fff; box-shadow: 0 20px 60px -20px rgba(11,29,92,.35); }
+  .caps { font-family: Cinzel, "Playfair Display", serif; letter-spacing: .14em; text-transform: uppercase; }
+  .serif { font-family: "Playfair Display", Georgia, serif; }
+  .top { position: absolute; inset: 0 0 auto 0; height: 78mm; background: radial-gradient(120% 140% at 50% -30%, #1f3fb8 0%, #0b1d5c 55%, #071340 100%); }
+  .top::after { content: ""; position: absolute; left: -10%; right: -10%; bottom: -42mm; height: 70mm; background: #fff; border-radius: 50%; box-shadow: 0 -2.2mm 0 #e3b341, 0 -3.4mm 0 #f6dc8f; }
+  .medal { position: absolute; top: 10mm; left: 14mm; width: 42mm; height: 42mm; border-radius: 50%; background: #fff; border: 1.6mm solid #e3b341; display: grid; place-items: center; box-shadow: 0 3mm 8mm rgba(0,0,0,.25); z-index: 2; }
+  .medal img { width: 34mm; height: 34mm; object-fit: contain; }
+  .title { position: absolute; top: 12mm; left: 60mm; right: 60mm; text-align: center; color: #fff; z-index: 2; }
+  .title h1 { font-size: 40pt; font-weight: 700; margin: 0; line-height: 1.1; }
+  .pill { display: inline-block; margin-top: 3mm; padding: 2mm 9mm; border-radius: 99px; background: linear-gradient(#f6dc8f, #e3b341); color: #0b1d5c; font: 800 11pt "Plus Jakarta Sans"; letter-spacing: .3em; text-transform: uppercase; }
+  .seal { position: absolute; top: 12mm; right: 16mm; width: 34mm; height: 34mm; border-radius: 50%; background: conic-gradient(from 0deg, #e3b341, #fff2c4, #c99a2e, #fff2c4, #e3b341); display: grid; place-items: center; z-index: 2; }
+  .seal div { width: 26mm; height: 26mm; border-radius: 50%; background: #0b1d5c; color: #f6dc8f; display: grid; place-items: center; text-align: center; font: 700 7pt Cinzel, serif; letter-spacing: .12em; line-height: 1.4; }
+  .body { position: absolute; top: 84mm; left: 26mm; right: 26mm; text-align: center; }
+  .brand { font-size: 19pt; font-weight: 700; margin: 0; } .brand small { display: block; font: 700 8.5pt "Plus Jakarta Sans"; letter-spacing: .22em; color: #9a6a0a; margin-top: 1mm; }
+  .lead { font-size: 11.5pt; color: #34405f; margin: 4mm 0 0; line-height: 1.6; }
+  .name { font-size: 29pt; margin: 1.5mm 0 0; color: #0b1d5c; }
+  .ident { font-size: 9pt; color: #6b7590; margin: .5mm 0 0; }
+  .course { font-size: 15pt; font-weight: 800; color: #1238c4; }
+  .mention { display: inline-block; margin: 0 1mm; padding: .6mm 3.5mm; border-radius: 99px; background: #fdf3d6; color: #8a5d00; font-weight: 800; }
+  .valoir { font-size: 9.5pt !important; color: #6b7590 !important; margin-top: 2mm !important; }
+  .signs { position: absolute; left: 22mm; right: 22mm; bottom: 24mm; display: grid; grid-template-columns: 66mm 1fr 66mm; align-items: end; font-size: 9pt; }
+  .sign { text-align: center; } .sign .line { border-bottom: .3mm solid #0b1d5c; height: 16mm; margin-bottom: 1.5mm; }
+  .sign b { display: block; font-size: 9pt; letter-spacing: .1em; text-transform: uppercase; }
+  .verify { text-align: center; font-size: 8pt; color: #5a6584; line-height: 1.5; padding: 0 4mm; } .verify b { color: #0b1d5c; }
+  .legal { position: absolute; left: 0; right: 0; bottom: 0; min-height: 15mm; background: #0b1d5c; color: #dfe5f7; font-size: 7.6pt; display: grid; place-items: center; border-top: 1.2mm solid #e3b341; padding: 2mm 12mm; text-align: center; }
+  .revoked { position: absolute; inset: 0; display: grid; place-items: center; font: 800 60pt "Plus Jakarta Sans"; color: rgba(229,72,77,.25); transform: rotate(-18deg); z-index: 5; }
   @media print { body { background: #fff; } .toolbar { display: none; } .sheet { margin: 0 !important; box-shadow: none; transform: none !important; } }
 </style>  <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
 <a href="accueil.html">Site public</a> · <a href="espace.html">Espace élève</a> · <a href="admin.html">Administration</a></div>
 <div class="toolbar"><button data-print>Imprimer / enregistrer en PDF</button><a href="admin-certificats.html">← Certificats</a></div>
-<div class="sheet"><div class="frame">
+<div class="sheet">
   
-  <div class="head"><img src="logo-cfp.webp?v=1793956659" alt="CFP Academy"><div><div class="brand">CFP ACADEMY</div><div class="small">Centre de Formation Professionnelle — Tunis</div></div><div class="ar">مركز التكوين المهني</div></div>
-  <div>
-    <h1>Certificat de formation</h1>
-    <p class="ar">شهادة تكوين مهني</p>
-    <p class="lead">La direction de CFP Academy certifie que</p>
-    <div class="name">Hiba Khelifi</div>
-    <p class="lead"></p>
-    <p class="lead" style="margin-top:3mm">a suivi avec assiduité la formation</p>
-    <p class="course">Coloration, mèches, ombré &amp; balayage</p>
-    <p class="course-ar">صباغة الشعر، الخصلات، الأومبري والبالاياج</p>
-    <p class="meta">du 20/10/2026 au 20/02/2027 · mention <b>Bien</b></p>
+  <div class="top"></div>
+  <div class="medal"><img src="logo-cfp.png?v=1793956646" alt="CFP Academy"></div>
+  <div class="title"><h1 class="caps">Certificat</h1><span class="pill">de formation</span></div>
+  <div class="seal"><div>CFP<br>ACADEMY<br>TUNIS</div></div>
+  <div class="body">
+    <p class="brand caps">CFP Academy<small>Centre de formation professionnelle</small></p>
+    <p class="lead">Je soussignée, Mme Hannachi Maroua, Directrice du Centre de Formation Professionnelle CFP Academy, atteste que</p>
+    <div class="name serif">Hiba Khelifi</div>
+    
+    <p class="lead" style="margin-top:2mm">a suivi la formation accélérée en <span class="course">Coloration, mèches, ombré &amp; balayage</span><br>
+      du 20/10/2026 au 20/02/2027, avec la mention <span class="mention">Bien</span></p>
+    <p class="lead valoir">Ce certificat est délivré pour servir et valoir ce que de droit.</p>
   </div>
-  <div class="foot">
-    <div class="verify">N° <b>CFP-2026-0001</b><br>Délivré à Tunis le 09/11/2026<br>Vérification : <b>https://www.cfpacademy.tn/certificat/1F01A06849</b></div>
-    <div class="seal">CFP<br>ACADEMY<br>TUNIS</div>
-    <div><div class="sign">La Direction</div></div>
+  <div class="signs">
+    <div class="sign"><div class="line"></div><b>Formateur / formatrice</b>Leila B.</div>
+    <div class="verify">N° <b>CFP-2026-0001</b> · délivré à Tunis le 09/11/2026<br>Vérifier l'authenticité : <b>https://www.cfpacademy.tn/certificat/989A20E5CD</b></div>
+    <div class="sign"><div class="line"></div><b>La directrice</b>Mme Hannachi Maroua · cachet</div>
   </div>
-</div></div>
+  <div class="legal">CFP Academy · 44, rue Nelson Mandela, Lafayette — Tunis Belvédère 1002 · MF : 1934714E/A/M/000 · N° d'enregistrement : 1123560026 · Tél. : (+216) 55 366 216 · 28 732 012 · 36 670 406</div>
+</div>
 <script src="/static/js/main.js?v=1793965613"></script>
 </body></html>
