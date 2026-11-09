@@ -21,41 +21,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Catalogue : vue d'ensemble des sections, les formations d'une section s'affichent quand on la choisit
-// (onglet ou carte), sans rechargement — marche aussi sur l'aperçu statique.
+// Catalogue : cartes des sections ; un clic (carte ou onglet) affiche les formations de la section JUSTE SOUS sa
+// carte, sans changer de page ni faire défiler. Un 2e clic referme. Marche aussi sur l'aperçu statique.
 (function () {
   const chips = document.getElementById('chips');
-  if (!chips) return;
-  const sections = document.querySelectorAll('[data-section]');
   const overview = document.getElementById('cat-overview');
+  const home = document.getElementById('cat-sections');
+  if (!chips || !overview || !home) return;
+  const grid = overview.querySelector('.cat-cards');
+  const sections = [...home.querySelectorAll('[data-section]')];
+  const cards = [...grid.querySelectorAll('[data-open]')];
   const active = chips.querySelector('.chip.active');
   let current = active ? (active.dataset.filter || '') : '';
+  function place(sec, card) {  // après la dernière carte de la même ligne : la liste occupe toute la largeur
+    let last = card;
+    for (const c of cards) if (c.offsetTop === card.offsetTop && cards.indexOf(c) > cards.indexOf(last)) last = c;
+    last.after(sec);
+  }
   function apply(key) {
     current = key || '';
-    if (overview) overview.hidden = !!current;
-    sections.forEach((s) => { s.hidden = s.dataset.section !== current; });
+    overview.hidden = false;
+    sections.forEach((s) => {
+      s.hidden = s.dataset.section !== current;
+      if (s.hidden && s.parentNode !== home) home.appendChild(s);
+    });
+    cards.forEach((c) => {
+      const on = c.dataset.open === current;
+      c.classList.toggle('open', on);
+      c.setAttribute('aria-expanded', on ? 'true' : 'false');
+      if (on) place(sections.find((s) => s.dataset.section === current), c);
+    });
     chips.querySelectorAll('.chip').forEach((c) => c.classList.toggle('active', (c.dataset.filter || '') === current));
   }
-  function open(key, scroll) {
-    apply(key);
-    try { history.replaceState(null, '', key ? '#' + key : location.pathname); } catch (err) {}
-    if (scroll) window.scrollTo({ top: chips.getBoundingClientRect().top + window.scrollY - 110, behavior: 'smooth' });  // sous l'en-tête fixe
+  function open(key) {
+    apply(key === current ? '' : key);
+    try { history.replaceState(null, '', current ? '#' + current : location.pathname); } catch (err) {}
   }
   chips.addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
     if (!chip) return;
     e.preventDefault();
-    open(chip.dataset.filter, false);
+    open(chip.dataset.filter || '');
   });
-  if (overview) overview.addEventListener('click', (e) => {
+  grid.addEventListener('click', (e) => {
     const card = e.target.closest('[data-open]');
     if (!card) return;
     e.preventDefault();
-    open(card.dataset.open, true);
+    open(card.dataset.open);
   });
-  window.cfpCatalogue = { restore: () => apply(current) };
+  let timer;
+  window.addEventListener('resize', () => { clearTimeout(timer); timer = setTimeout(() => apply(current), 150); });
+  window.cfpCatalogue = {
+    restore: () => apply(current),
+    all: () => { sections.forEach((s) => home.appendChild(s)); overview.hidden = true; },  // recherche
+  };
   const hash = location.hash.slice(1);
-  if (hash && document.querySelector('[data-section="' + hash + '"]')) apply(hash);
+  apply(hash && sections.some((s) => s.dataset.section === hash) ? hash : current);
 })();
 
 // Menus mobiles (site public et espaces) avec état aria-expanded
@@ -192,9 +213,8 @@ document.querySelectorAll(".theme-toggle").forEach((btn) => {
       if (q) sec.hidden = n === 0;
       shown += n;
     });
-    const overview = document.getElementById("cat-overview");
+    if (q && window.cfpCatalogue) window.cfpCatalogue.all();  // la recherche parcourt toutes les sections
     if (q) {
-      if (overview) overview.hidden = true;  // la recherche parcourt toutes les sections
       if (chips) chips.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
     } else if (window.cfpCatalogue) {
       window.cfpCatalogue.restore();

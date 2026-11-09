@@ -30,5 +30,14 @@
   </table>
   <div class="amount">400 DT</div>
   <div class="sign"><span>Signature de l'élève</span><span>Cachet et signature du centre</span></div>
-</div><script src="/static/js/main.js?v=1794211854"></script>
+</div><script src="main.js"></script><script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
+  var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
+  var f = document.createElement('div'); f.className = 'flash info';
+  f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';
+  box.appendChild(f); setTimeout(function () { f.remove(); }, 4000);
+}, true);
+</script>
 </body></html>

@@ -17,7 +17,7 @@
   <link rel="alternate" hreflang="ar" href="admin-site-medias.html">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=1793956646">
   <meta name="theme-color" content="#0b1d5c">
-  <script src="/static/js/theme.js?v=1793965366"></script>
+  <script src="theme.js"></script>
   <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="demo-bar">Aperçu de test · données fictives · aucun envoi réel —
@@ -100,7 +100,7 @@
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
         
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="GznTVoBRJpT3fQ-towMJ7wKTu7sUz6p-E1witsAv4KQ"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -136,7 +136,7 @@
   <a href="admin-site-coordonnees.html" class="">Coordonnées</a>
   
 </nav>
-<form method="post" enctype="multipart/form-data" class="card upload-card"><input type="hidden" name="_csrf" value="GznTVoBRJpT3fQ-towMJ7wKTu7sUz6p-E1witsAv4KQ"><input type="hidden" name="action" value="upload">
+<form method="post" enctype="multipart/form-data" class="card upload-card"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="action" value="upload">
   <label class="dropzone" for="m-files"><span class="kpi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>
 </svg></span><b>Importer des fichiers</b><span class="small muted">Cliquez ou glissez vos fichiers ici</span>
     <input id="m-files" type="file" name="files" multiple accept=".jpg,.jpeg,.png,.webp,.gif,.pdf,.mp4,.webm" required></label>
@@ -150,6 +150,15 @@
 
   </main>
 </div>
-<script src="/static/js/main.js?v=1794211854"></script>
+<script src="main.js"></script><script>
+document.addEventListener('submit', function (e) {
+  e.preventDefault(); e.stopImmediatePropagation();
+  if (e.target.dataset.demoNext) { location.href = e.target.dataset.demoNext; return; }
+  var box = document.querySelector('.flashes') || document.body.appendChild(Object.assign(document.createElement('div'), {className: 'flashes'}));
+  var f = document.createElement('div'); f.className = 'flash info';
+  f.innerHTML = '<span>Aperçu de test : cette action sera active sur le site en ligne.</span>';
+  box.appendChild(f); setTimeout(function () { f.remove(); }, 4000);
+}, true);
+</script>
 </body>
 </html>

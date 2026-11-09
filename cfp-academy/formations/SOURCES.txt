@@ -18,9 +18,9 @@ coiffure-homme-degrade.webp  https://images.unsplash.com/photo-1647140655214-e4a
 bureautique-secretariat.webp  https://images.unsplash.com/photo-1602016736566-7ed6a58894bd
 comptabilite-finance.webp  https://images.unsplash.com/photo-1626266061368-46a8f578ddd6
 maintenance-informatique.webp  https://images.unsplash.com/photo-1785947058973-43d5e9c64ef7
-langue-francais.webp  https://images.unsplash.com/photo-1502602898657-3e91760cbb34
-langue-anglais.webp  https://images.unsplash.com/photo-1486299267070-83823f5448dd
-langue-allemand.webp  https://images.unsplash.com/photo-1587330979470-3595ac045ab0
-langue-italien.webp  https://images.unsplash.com/photo-1552832230-c0197dd311b5
+langue-francais.webp  drapeau dessiné pour le site (domaine public)
+langue-anglais.webp  drapeau dessiné pour le site (domaine public)
+langue-allemand.webp  drapeau dessiné pour le site (domaine public)
+langue-italien.webp  drapeau dessiné pour le site (domaine public)
 coaching.webp  https://images.unsplash.com/photo-1573497620053-ea5300f94f21
 startup-marketing.webp  https://images.unsplash.com/photo-1542744173-8e7e53415bb0

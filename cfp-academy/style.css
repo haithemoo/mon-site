@@ -960,3 +960,11 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .cat-card b { display: block; font-family: var(--serif); font-size: 1.25rem; line-height: 1.15; }
 .cat-card small { display: block; margin-top: .3rem; font-weight: 700; opacity: .9; }
 .cat-card span { position: relative; z-index: 1; text-shadow: 0 1px 3px rgba(0,0,0,.25); }
+
+/* Catalogue : formations d'une section affichées sous sa carte */
+.cat-cards > .course-section { grid-column: 1 / -1; margin: .2rem 0 1rem !important; padding: 1.4rem 1.4rem .4rem; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 18px 40px -24px rgba(11,29,92,.35); animation: cat-open .25s ease-out; }
+.cat-cards > .course-section > h2 { font-size: 1.4rem !important; }
+.cat-card.open { outline: 3px solid #e3b341; outline-offset: 3px; }
+.cat-card.open::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 18px; height: 18px; background: rgba(255,255,255,.95); transform: translate(-50%, 50%) rotate(45deg); z-index: 2; }
+@keyframes cat-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .cat-cards > .course-section { animation: none; } }
