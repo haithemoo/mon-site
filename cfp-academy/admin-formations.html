@@ -66,6 +66,8 @@
 </svg>Prospects<span class="count" title="Relances à faire aujourd'hui">12</span></a>
     <a href="admin-formations.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/>
 </svg>Formations</a>
+    <a href="#" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/>
+</svg>Papiers</a>
     <a href="admin-crm-stats.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
 </svg>Statistiques</a>
   </nav>
@@ -102,7 +104,7 @@
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
         
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -115,7 +117,7 @@
 
 <div class="page-head"><div><h1>Formations</h1><p>Ajoutez, renommez ou supprimez une formation et réglez son type, sa durée et son prix. Le site public est mis à jour aussitôt.</p></div></div>
 
-<form class="card course-add" method="post"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="add">
+<form class="card course-add" method="post"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="add">
   <h3 style="margin-top:0">+ Nouvelle formation</h3>
   <div class="course-line">
     <div class="cl-title"><label for="add-title">Nom</label><input id="add-title" name="title" required minlength="3" maxlength="120" placeholder="Ex. : Pâtisserie professionnelle"></div>
@@ -132,7 +134,7 @@
   <h3 style="margin-top:0">Bureautique &amp; Secrétariat <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-13"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="13">
+    <form method="post" class="course-line" id="crs-13"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="13">
       <div class="cl-title"><label for="t-13">Nom</label><input id="t-13" name="title" required minlength="3" maxlength="120" value="Bureautique &amp; Secrétariat"></div>
       <div><label for="ty-13">Type</label><select id="ty-13" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-13">Durée</label><input id="d-13" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -140,7 +142,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="13"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Bureautique &amp; Secrétariat » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="13"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Bureautique &amp; Secrétariat » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -149,7 +151,7 @@
   <h3 style="margin-top:0">Coaching <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-20"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="20">
+    <form method="post" class="course-line" id="crs-20"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="20">
       <div class="cl-title"><label for="t-20">Nom</label><input id="t-20" name="title" required minlength="3" maxlength="120" value="Coaching"></div>
       <div><label for="ty-20">Type</label><select id="ty-20" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-20">Durée</label><input id="d-20" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -157,7 +159,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="20"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Coaching » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="20"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Coaching » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -166,7 +168,7 @@
   <h3 style="margin-top:0">Coiffure &amp; Esthétique femme <span class="small muted">· 11 formations</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-1"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="1">
+    <form method="post" class="course-line" id="crs-1"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="1">
       <div class="cl-title"><label for="t-1">Nom</label><input id="t-1" name="title" required minlength="3" maxlength="120" value="Brushing professionnel"></div>
       <div><label for="ty-1">Type</label><select id="ty-1" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-1">Durée</label><input id="d-1" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -174,11 +176,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="1"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Brushing professionnel » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="1"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Brushing professionnel » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-2"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="2">
+    <form method="post" class="course-line" id="crs-2"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="2">
       <div class="cl-title"><label for="t-2">Nom</label><input id="t-2" name="title" required minlength="3" maxlength="120" value="Coloration, mèches, ombré &amp; balayage"></div>
       <div><label for="ty-2">Type</label><select id="ty-2" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-2">Durée</label><input id="d-2" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -186,11 +188,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="2"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Coloration, mèches, ombré &amp; balayage » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="2"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Coloration, mèches, ombré &amp; balayage » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-3"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="3">
+    <form method="post" class="course-line" id="crs-3"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="3">
       <div class="cl-title"><label for="t-3">Nom</label><input id="t-3" name="title" required minlength="3" maxlength="120" value="Hair Botox"></div>
       <div><label for="ty-3">Type</label><select id="ty-3" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-3">Durée</label><input id="d-3" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -198,11 +200,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="3"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Hair Botox » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="3"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Hair Botox » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-4"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="4">
+    <form method="post" class="course-line" id="crs-4"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="4">
       <div class="cl-title"><label for="t-4">Nom</label><input id="t-4" name="title" required minlength="3" maxlength="120" value="Soins visage profonds"></div>
       <div><label for="ty-4">Type</label><select id="ty-4" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-4">Durée</label><input id="d-4" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -210,11 +212,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="4"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Soins visage profonds » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="4"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Soins visage profonds » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-5"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="5">
+    <form method="post" class="course-line" id="crs-5"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="5">
       <div class="cl-title"><label for="t-5">Nom</label><input id="t-5" name="title" required minlength="3" maxlength="120" value="Peeling &amp; Microneedling"></div>
       <div><label for="ty-5">Type</label><select id="ty-5" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-5">Durée</label><input id="d-5" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -222,11 +224,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="5"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Peeling &amp; Microneedling » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="5"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Peeling &amp; Microneedling » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-6"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="6">
+    <form method="post" class="course-line" id="crs-6"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="6">
       <div class="cl-title"><label for="t-6">Nom</label><input id="t-6" name="title" required minlength="3" maxlength="120" value="Lash Lift &amp; Brow Lift"></div>
       <div><label for="ty-6">Type</label><select id="ty-6" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-6">Durée</label><input id="d-6" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -234,11 +236,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="6"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Lash Lift &amp; Brow Lift » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="6"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Lash Lift &amp; Brow Lift » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-7"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="7">
+    <form method="post" class="course-line" id="crs-7"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="7">
       <div class="cl-title"><label for="t-7">Nom</label><input id="t-7" name="title" required minlength="3" maxlength="120" value="Extension des cils"></div>
       <div><label for="ty-7">Type</label><select id="ty-7" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-7">Durée</label><input id="d-7" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -246,11 +248,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="7"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Extension des cils » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="7"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Extension des cils » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-8"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="8">
+    <form method="post" class="course-line" id="crs-8"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="8">
       <div class="cl-title"><label for="t-8">Nom</label><input id="t-8" name="title" required minlength="3" maxlength="120" value="Gel capsule &amp; BB Boomer"></div>
       <div><label for="ty-8">Type</label><select id="ty-8" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-8">Durée</label><input id="d-8" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -258,11 +260,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="8"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Gel capsule &amp; BB Boomer » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="8"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Gel capsule &amp; BB Boomer » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-9"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="9">
+    <form method="post" class="course-line" id="crs-9"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="9">
       <div class="cl-title"><label for="t-9">Nom</label><input id="t-9" name="title" required minlength="3" maxlength="120" value="French moderne &amp; Nail Art 3D"></div>
       <div><label for="ty-9">Type</label><select id="ty-9" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-9">Durée</label><input id="d-9" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -270,11 +272,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="9"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « French moderne &amp; Nail Art 3D » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="9"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « French moderne &amp; Nail Art 3D » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-10"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="10">
+    <form method="post" class="course-line" id="crs-10"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="10">
       <div class="cl-title"><label for="t-10">Nom</label><input id="t-10" name="title" required minlength="3" maxlength="120" value="Maquillage jour / soirée"></div>
       <div><label for="ty-10">Type</label><select id="ty-10" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-10">Durée</label><input id="d-10" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -282,11 +284,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="10"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Maquillage jour / soirée » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="10"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Maquillage jour / soirée » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-11"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="11">
+    <form method="post" class="course-line" id="crs-11"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="11">
       <div class="cl-title"><label for="t-11">Nom</label><input id="t-11" name="title" required minlength="3" maxlength="120" value="Smokey eyes, faux cils &amp; contouring"></div>
       <div><label for="ty-11">Type</label><select id="ty-11" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-11">Durée</label><input id="d-11" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -294,7 +296,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="11"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Smokey eyes, faux cils &amp; contouring » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="11"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Smokey eyes, faux cils &amp; contouring » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -303,7 +305,7 @@
   <h3 style="margin-top:0">Coiffure homme <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-12"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="12">
+    <form method="post" class="course-line" id="crs-12"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="12">
       <div class="cl-title"><label for="t-12">Nom</label><input id="t-12" name="title" required minlength="3" maxlength="120" value="Coiffure homme &amp; dégradé"></div>
       <div><label for="ty-12">Type</label><select id="ty-12" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-12">Durée</label><input id="d-12" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -311,7 +313,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="12"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Coiffure homme &amp; dégradé » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="12"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Coiffure homme &amp; dégradé » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -320,7 +322,7 @@
   <h3 style="margin-top:0">Comptabilité &amp; Finance <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-14"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="14">
+    <form method="post" class="course-line" id="crs-14"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="14">
       <div class="cl-title"><label for="t-14">Nom</label><input id="t-14" name="title" required minlength="3" maxlength="120" value="Comptabilité &amp; Finance"></div>
       <div><label for="ty-14">Type</label><select id="ty-14" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-14">Durée</label><input id="d-14" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -328,7 +330,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">2 élèves</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="14"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Comptabilité &amp; Finance » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="14"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Comptabilité &amp; Finance » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -337,7 +339,7 @@
   <h3 style="margin-top:0">Langues <span class="small muted">· 4 formations</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-16"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="16">
+    <form method="post" class="course-line" id="crs-16"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="16">
       <div class="cl-title"><label for="t-16">Nom</label><input id="t-16" name="title" required minlength="3" maxlength="120" value="Français"></div>
       <div><label for="ty-16">Type</label><select id="ty-16" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-16">Durée</label><input id="d-16" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -345,11 +347,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="16"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Français » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="16"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Français » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-17"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="17">
+    <form method="post" class="course-line" id="crs-17"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="17">
       <div class="cl-title"><label for="t-17">Nom</label><input id="t-17" name="title" required minlength="3" maxlength="120" value="Anglais"></div>
       <div><label for="ty-17">Type</label><select id="ty-17" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-17">Durée</label><input id="d-17" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -357,11 +359,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">1 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="17"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Anglais » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="17"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Anglais » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-18"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="18">
+    <form method="post" class="course-line" id="crs-18"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="18">
       <div class="cl-title"><label for="t-18">Nom</label><input id="t-18" name="title" required minlength="3" maxlength="120" value="Allemand"></div>
       <div><label for="ty-18">Type</label><select id="ty-18" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-18">Durée</label><input id="d-18" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -369,11 +371,11 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="18"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Allemand » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="18"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Allemand » ?">Supprimer</button></form>
   </div>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-19"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="19">
+    <form method="post" class="course-line" id="crs-19"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="19">
       <div class="cl-title"><label for="t-19">Nom</label><input id="t-19" name="title" required minlength="3" maxlength="120" value="Italien"></div>
       <div><label for="ty-19">Type</label><select id="ty-19" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-19">Durée</label><input id="d-19" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -381,7 +383,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">0 élève</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="19"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Italien » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="19"><button class="btn btn-danger btn-sm"  data-confirm="Supprimer définitivement « Italien » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -390,7 +392,7 @@
   <h3 style="margin-top:0">Maintenance informatique <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-15"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="15">
+    <form method="post" class="course-line" id="crs-15"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="15">
       <div class="cl-title"><label for="t-15">Nom</label><input id="t-15" name="title" required minlength="3" maxlength="120" value="Maintenance informatique"></div>
       <div><label for="ty-15">Type</label><select id="ty-15" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-15">Durée</label><input id="d-15" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -398,7 +400,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">2 élèves</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="15"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Maintenance informatique » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="15"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Maintenance informatique » ?">Supprimer</button></form>
   </div>
   
 </div>
@@ -407,7 +409,7 @@
   <h3 style="margin-top:0">Startup &amp; Marketing <span class="small muted">· 1 formation</span></h3>
   
   <div class="course-line course-row-edit">
-    <form method="post" class="course-line" id="crs-21"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="21">
+    <form method="post" class="course-line" id="crs-21"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="save"><input type="hidden" name="cid" value="21">
       <div class="cl-title"><label for="t-21">Nom</label><input id="t-21" name="title" required minlength="3" maxlength="120" value="Startup &amp; Marketing"></div>
       <div><label for="ty-21">Type</label><select id="ty-21" name="training_type"><option value="accélérée" selected>Accélérée</option><option value="complète" >Complète</option><option value="CAP" >CAP</option><option value="BTP" >BTP</option><option value="BTS" >BTS</option><option value="autre" >Autre</option></select></div>
       <div><label for="d-21">Durée</label><input id="d-21" name="duration" maxlength="80" value="" placeholder="à préciser"></div>
@@ -415,7 +417,7 @@
       <div class="cl-vis"><label class="check"><input type="checkbox" name="is_active" value="1" checked> Visible</label><span class="small muted">2 élèves</span></div>
       <div class="cl-btn"><button class="btn btn-primary btn-sm">Enregistrer</button><a class="btn btn-light btn-sm" href="admin-formation.html">Fiche</a></div>
     </form>
-    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="uR3yfVjo1N25pkEIzuCDxq_IALUTFo3xLXB5bxd9PjQ"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="21"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Startup &amp; Marketing » ?">Supprimer</button></form>
+    <form method="post" class="cl-del"><input type="hidden" name="_csrf" value="zDP51IU4R-Z5S3rVnr64ktwYTIMgTlCvHYwaG58Up94"><input type="hidden" name="action" value="delete"><input type="hidden" name="cid" value="21"><button class="btn btn-danger btn-sm" disabled title="Formation avec des inscriptions : décochez Visible pour la retirer du site" data-confirm="Supprimer définitivement « Startup &amp; Marketing » ?">Supprimer</button></form>
   </div>
   
 </div>

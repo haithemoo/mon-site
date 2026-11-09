@@ -1004,3 +1004,19 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
   .course-line .cl-title { grid-column: 1 / -1; }
   .course-row-edit { grid-template-columns: 1fr; }
 }
+
+/* Inscriptions (simplifié) : papiers en pastilles cliquables */
+.paper-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.paper-chips form { margin: 0; }
+.paper-chip { font: 600 .8rem/1.2 inherit; padding: .35em .7em; border-radius: 99px; border: 1px dashed #c4cbe0; background: transparent; color: inherit; cursor: pointer; }
+.paper-chip:hover { border-color: #1238c4; }
+.paper-chip.on { border: 1px solid #2f9e6b; background: #e7f6ee; color: #1f6e4a; }
+[data-theme="dark"] .paper-chip.on { background: rgba(47,158,107,.18); color: #8fe0b8; }
+.dossier-table td { vertical-align: middle; }
+.dossier-table button[disabled] { opacity: .45; cursor: not-allowed; }
+/* Papiers demandés */
+.paper-line { display: grid; grid-template-columns: 1fr 1fr 90px auto; gap: .6rem .8rem; align-items: end; }
+form.card .paper-line { grid-template-columns: 1fr 1fr auto; }
+.paper-row { display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: end; padding: .7rem 0; border-top: 1px solid var(--line); }
+.paper-row:first-child { border-top: 0; }
+@media (max-width: 760px) { .paper-line, form.card .paper-line { grid-template-columns: 1fr; } .paper-row { grid-template-columns: 1fr; } }
