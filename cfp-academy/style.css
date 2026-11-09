@@ -930,3 +930,6 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .team-card > div { padding: 1.1rem 1.2rem 1.3rem; }
 .team-card h3 { font-size: 1.3rem; margin: 0 0 .4rem; }
 .team-card p { margin: .7rem 0 0; color: var(--ink-soft); font-size: .93rem; }
+.reg-dl-row { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .8rem; }
+.reg-dl-row svg { width: 18px; height: 18px; flex: none; }
+.reg-dl + .reg-dl { margin-top: .5rem; }
