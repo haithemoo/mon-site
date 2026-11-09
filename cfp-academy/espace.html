@@ -51,7 +51,7 @@
 </svg>Voir le site</a>
         <a href="ar-espace.html" lang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>النسخة العربية</a>
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="svMRLAe0kZyPbafiCWGnV2W34yXMadVN9u-Sfy3u3hY"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="ioCvsgyPa8SScFjgoJfUNPDXWuEHVQo8SLFTUMlzxso"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -66,9 +66,15 @@
   <a class="btn btn-primary" href="#nouvelle">+ Nouvelle formation</a>
 </div>
 
+
+<div class="card parcours-card">
+  <h2 style="font-size:1.4rem;margin:0 0 .3rem">Votre demande d&#39;inscription est en cours d&#39;examen</h2>
+  <p class="muted" style="margin:0">Notre équipe étudie votre demande et vous contacte rapidement. Dès qu&#39;elle est validée, vous recevez un e-mail et votre dossier d&#39;inscription s&#39;ouvre ici.</p>
+</div>
+
 <div class="stats">
-  <div class="stat accent"><div class="label">Formations en cours</div><div class="value">1</div></div>
-  <div class="stat"><div class="label">Demandes en attente</div><div class="value">0</div></div>
+  <div class="stat accent"><div class="label">Formations en cours</div><div class="value">0</div></div>
+  <div class="stat"><div class="label">Demandes en attente</div><div class="value">1</div></div>
   <div class="stat"><div class="label">Total payé</div><div class="value">400 <small>DT</small></div></div>
   <div class="stat"><div class="label">Absences</div><div class="value">1</div></div>
 </div>
@@ -81,19 +87,16 @@
       <div class="enr-card">
         <div class="enr-top">
           <div><span class="tag">Coiffure &amp; Esthétique femme</span><h3>Coloration, mèches, ombré &amp; balayage</h3>
-            <span class="small muted">Demande du 09/11/2026 11:44 · Début le 20/10/2026</span></div>
-          <span class="badge b-confirmee">Confirmée</span>
+            <span class="small muted">Demande du 09/11/2026 13:05</span></div>
+          <span class="badge b-en_attente">En attente</span>
         </div>
         
-        <div class="enr-stats">
-          <div><span>Assiduité</span><b>80 %</b></div>
-          <div><span>Séances / absences</span><b>5 / 1</b></div>
-          <div><span>Payé / reste</span><b>400 DT / 500 DT</b></div>
-        </div>
-        <div class="progress"><span style="width:80%"></span></div>
+        <p class="notice" style="margin:0">Votre demande est bien reçue. Notre équipe vous contacte pour confirmer la date de démarrage.</p>
         
         <div class="actions">
           <a class="btn btn-light btn-sm" href="espace-formation.html">Détails</a>
+          
+          <form method="post" action="#" data-confirm="Annuler cette demande ?"><input type="hidden" name="_csrf" value="ioCvsgyPa8SScFjgoJfUNPDXWuEHVQo8SLFTUMlzxso"><button class="btn btn-danger btn-sm">Annuler la demande</button></form>
           
         </div>
       </div>
@@ -132,7 +135,7 @@
     <div class="card" id="nouvelle">
       <h3>S&#39;inscrire à une formation</h3>
       
-      <form method="post" action="#" style="display:grid;gap:.8rem"><input type="hidden" name="_csrf" value="svMRLAe0kZyPbafiCWGnV2W34yXMadVN9u-Sfy3u3hY">
+      <form method="post" action="#" style="display:grid;gap:.8rem"><input type="hidden" name="_csrf" value="ioCvsgyPa8SScFjgoJfUNPDXWuEHVQo8SLFTUMlzxso">
         <select name="course_id" required aria-label="Formation souhaitée">
           <option value="1">Brushing professionnel — Sur demande</option><option value="3">Hair Botox — Sur demande</option><option value="4">Soins visage profonds — Sur demande</option><option value="5">Peeling &amp; Microneedling — Sur demande</option>
         </select>

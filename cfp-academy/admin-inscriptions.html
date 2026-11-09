@@ -46,7 +46,7 @@
     <a href="admin-eleves.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/>
 </svg>Élèves</a>
     <a href="admin-inscriptions.html" class="active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
-</svg>Inscriptions<span class="count">3</span></a>
+</svg>Inscriptions</a>
     <a href="admin-paiements.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/>
 </svg>Paiements</a>
     <a href="admin-finances.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
@@ -63,7 +63,7 @@
   <div class="side-label">Commercial</div>
   <nav class="side-nav">
     <a href="admin-crm.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>
-</svg>Prospects<span class="count" title="Relances à faire aujourd'hui">8</span></a>
+</svg>Prospects<span class="count" title="Relances à faire aujourd'hui">12</span></a>
     <a href="admin-crm-stats.html" class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
 </svg>Statistiques</a>
   </nav>
@@ -100,7 +100,7 @@
         <a href="accueil.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
 </svg>Voir le site</a>
         
-        <form method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
+        <form method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><button><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l-5-5 5-5M5 12h11"/>
 </svg>Déconnexion</button></form>
       </nav>
     </div>
@@ -110,92 +110,17 @@
 
 
     
-<div class="page-head"><div><h1>Inscriptions</h1><p>Validez les demandes et suivez les formations en cours.</p></div></div>
+<div class="page-head"><div><h1>Inscriptions</h1><p>Prospect validé → dossier à compléter (formation + papiers reçus au centre) → élève.</p></div></div>
 <div class="card">
   <nav class="tabs">
-    <a href="admin-inscriptions.html" class="">En attente<span>3</span></a><a href="admin-inscriptions.html" class="">Confirmée<span>9</span></a><a href="admin-inscriptions.html" class="">Terminée<span>19</span></a><a href="admin-inscriptions.html" class="">Annulée<span>0</span></a>
+    <a href="admin-inscriptions.html" class="">Dossiers à compléter<span>0</span></a>
+    <a href="admin-inscriptions.html" class="">En attente<span>0</span></a><a href="admin-inscriptions.html" class="">Confirmée<span>5</span></a><a href="admin-inscriptions.html" class="">Terminée<span>19</span></a><a href="admin-inscriptions.html" class="">Annulée<span>0</span></a>
     <a href="admin-inscriptions.html" class="active">Toutes</a>
   </nav>
+  
   <div class="table-wrap"><table>
     <thead><tr><th>Élève</th><th>Formation</th><th>Demande</th><th>Payé</th><th>Statut</th><th>Changer</th></tr></thead>
     <tbody>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Yassine Trabelsi</a><br><a class="small" href="tel:+21655000001">+216 55 000 001</a></td>
-        <td>Coiffure homme &amp; dégradé</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">250 DT / 900</td>
-        <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Yassine Trabelsi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Nour Gharbi</a><br><a class="small" href="tel:+21655000002">+216 55 000 002</a></td>
-        <td>Bureautique &amp; Secrétariat</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">300 DT / 900</td>
-        <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Nour Gharbi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Sarra Jlassi</a><br><a class="small" href="tel:+21655000003">+216 55 000 003</a></td>
-        <td>Anglais</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">0 DT</td>
-        <td><span class="badge b-en_attente">En attente</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Sarra Jlassi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" selected>En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Mehdi Ayari</a><br><a class="small" href="tel:+21655000004">+216 55 000 004</a></td>
-        <td>Maintenance informatique</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">0 DT</td>
-        <td><span class="badge b-en_attente">En attente</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Mehdi Ayari" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" selected>En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Ines Mansouri</a><br><a class="small" href="tel:+21655000005">+216 55 000 005</a></td>
-        <td>Comptabilité &amp; Finance</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">450 DT / 900</td>
-        <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Ines Mansouri" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Karim Ferchichi</a><br><a class="small" href="tel:+21655000006">+216 55 000 006</a> <span class="badge b-en_attente" title="Le candidat n'a pas encore saisi le code SMS">Tél. non vérifié</span></td>
-        <td>Startup &amp; Marketing</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">0 DT</td>
-        <td><span class="badge b-en_attente">En attente</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Karim Ferchichi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" selected>En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
-    
-      <tr>
-        <td><a class="name" href="admin-eleve.html">Amira Ben Salah</a><br><a class="small" href="tel:+21655000000">+216 55 000 000</a></td>
-        <td>Coloration, mèches, ombré &amp; balayage</td>
-        <td class="small">09/11/2026 11:44</td>
-        <td class="small">400 DT / 900</td>
-        <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
-          <select name="status" aria-label="Changer le statut de Amira Ben Salah" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
-        </form></td>
-      </tr>
     
       <tr>
         <td><a class="name" href="admin-eleve.html">Amine Labidi</a><br><a class="small" href="tel:+21626123223">26 123 223</a></td>
@@ -203,7 +128,7 @@
         <td class="small">09/11/2026 10:00</td>
         <td class="small">0 DT / 450</td>
         <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Amine Labidi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -214,7 +139,7 @@
         <td class="small">15/10/2026 10:00</td>
         <td class="small">150 DT / 900</td>
         <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Dorra Saidi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -225,7 +150,7 @@
         <td class="small">10/10/2026 10:00</td>
         <td class="small">262 DT / 750</td>
         <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Nesrine Ouni" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -236,7 +161,7 @@
         <td class="small">20/09/2026 10:00</td>
         <td class="small">400 DT / 1200</td>
         <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Chaima Hamdi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -247,7 +172,7 @@
         <td class="small">05/09/2026 10:00</td>
         <td class="small">300 DT / 600</td>
         <td><span class="badge b-confirmee">Confirmée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Firas Nasri" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" selected>Confirmée</option><option value="terminee" >Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -258,7 +183,7 @@
         <td class="small">16/08/2026 10:00</td>
         <td class="small">450 DT / 450</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Lina Haddad" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -269,7 +194,7 @@
         <td class="small">11/08/2026 10:00</td>
         <td class="small">900 DT / 900</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Skander Masmoudi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -280,7 +205,7 @@
         <td class="small">22/07/2026 10:00</td>
         <td class="small">600 DT / 600</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Malek Baccar" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -291,7 +216,7 @@
         <td class="small">07/07/2026 10:00</td>
         <td class="small">374 DT / 750</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Yosra Arfaoui" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -302,7 +227,7 @@
         <td class="small">17/06/2026 10:00</td>
         <td class="small">1200 DT / 1200</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Sana Ghanmi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -313,7 +238,7 @@
         <td class="small">12/06/2026 10:00</td>
         <td class="small">450 DT / 450</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Ons Toumi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -324,7 +249,7 @@
         <td class="small">23/05/2026 10:00</td>
         <td class="small">750 DT / 750</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Houda Jebali" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -335,7 +260,7 @@
         <td class="small">08/05/2026 10:00</td>
         <td class="small">630 DT / 900</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Anis Bouzid" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -346,7 +271,7 @@
         <td class="small">18/04/2026 10:00</td>
         <td class="small">600 DT / 600</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Mariem Sassi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -357,7 +282,7 @@
         <td class="small">13/04/2026 10:00</td>
         <td class="small">1200 DT / 1200</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Oussama Kefi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -368,7 +293,7 @@
         <td class="small">24/03/2026 10:00</td>
         <td class="small">900 DT / 900</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Emna Zouari" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -379,7 +304,7 @@
         <td class="small">09/03/2026 10:00</td>
         <td class="small">224 DT / 450</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Fatma Mejri" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -390,7 +315,7 @@
         <td class="small">17/02/2026 10:00</td>
         <td class="small">750 DT / 750</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Wael Ben Amor" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -401,7 +326,7 @@
         <td class="small">12/02/2026 10:00</td>
         <td class="small">600 DT / 600</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Asma Dridi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -412,7 +337,7 @@
         <td class="small">23/01/2026 10:00</td>
         <td class="small">450 DT / 450</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Rim Chaabane" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -423,7 +348,7 @@
         <td class="small">08/01/2026 10:00</td>
         <td class="small">600 DT / 1200</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Bilel Hammami" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -434,7 +359,7 @@
         <td class="small">19/12/2025 10:00</td>
         <td class="small">900 DT / 900</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Salma Bouazizi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -445,7 +370,7 @@
         <td class="small">14/12/2025 10:00</td>
         <td class="small">750 DT / 750</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Aymen Riahi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
@@ -456,13 +381,14 @@
         <td class="small">09/12/2025 10:00</td>
         <td class="small">420 DT / 600</td>
         <td><span class="badge b-terminee">Terminée</span></td>
-        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="ks1NweT1ecsydc_qIeVLGJF7qFzrqTHBA2ZND_mJxEM"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
+        <td><form class="actions" method="post" action="#"><input type="hidden" name="_csrf" value="phQBx1U6Xhd1RzDyrqOdWa3rkOEaLHd024c9Z9ZDG0I"><input type="hidden" name="back" value="/admin/inscriptions?statut=toutes">
           <select name="status" aria-label="Changer le statut de Hiba Khelifi" style="width:auto;padding:.4em .6em" data-autosubmit><option value="en_attente" >En attente</option><option value="confirmee" >Confirmée</option><option value="terminee" selected>Terminée</option><option value="annulee" >Annulée</option></select>
         </form></td>
       </tr>
     
     </tbody>
   </table></div>
+  
 </div>
 
   </main>

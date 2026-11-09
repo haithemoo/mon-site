@@ -968,3 +968,22 @@ a.kpi:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-col
 .cat-card.open::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 18px; height: 18px; background: rgba(255,255,255,.95); transform: translate(-50%, 50%) rotate(45deg); z-index: 2; }
 @keyframes cat-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .cat-cards > .course-section { animation: none; } }
+
+/* Administration : dossiers d'inscription (formation, papiers reçus, paiement → accepter) */
+.dossiers { display: grid; gap: 1rem; }
+.dossier { border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; background: var(--paper); }
+.dossier.complet { border-color: #2f9e6b; box-shadow: 0 0 0 1px #2f9e6b inset; }
+.dossier header, .dossier footer { display: flex; justify-content: space-between; align-items: center; gap: .8rem; flex-wrap: wrap; }
+.dossier footer { margin-top: .8rem; padding-top: .8rem; border-top: 1px dashed var(--line); }
+.dossier footer form { margin-left: auto; }
+.dossier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .4rem 1.4rem; margin-top: .8rem; }
+.dossier h4 { margin: 0 0 .4rem; font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+.dossier p { margin: .2rem 0; }
+.dossier .piece { margin: .15rem 0; }
+.dossier .piece .check { font-size: .92rem; overflow-wrap: anywhere; }
+.dossier button[disabled] { opacity: .45; cursor: not-allowed; }
+/* Espace candidat : dossier à compléter */
+.parcours-card ol { margin: .4rem 0 0; padding-inline-start: 1.2rem; display: grid; gap: .7rem; }
+.parcours-card .ok { color: #1f8a5b; font-weight: 700; }
+.parcours-card .todo { color: #b45309; font-weight: 700; }
+.parcours-card ul { margin: .3rem 0 0; padding-inline-start: 1.1rem; }
