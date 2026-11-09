@@ -1,0 +1,26 @@
+Photos par défaut des formations (une par formation, nom = slug de la formation).
+Source : Unsplash (licence Unsplash : utilisation gratuite, y compris commerciale, sans attribution obligatoire).
+Recadrées en carré 560 px, WebP. Pour en changer : remplacez le fichier (même nom) ou choisissez une image
+dans l'administration (fiche de la formation → Image).
+
+brushing-professionnel.webp  https://images.unsplash.com/photo-1580618672591-eb180b1a973f
+coloration-meches-balayage.webp  https://images.unsplash.com/photo-1605980766335-d3a41c7332a1
+hair-botox.webp  https://images.unsplash.com/photo-1717160675489-7779f2c91999
+soins-visage.webp  https://images.unsplash.com/photo-1570172619644-dfd03ed5d881
+peeling-microneedling.webp  https://images.unsplash.com/photo-1761819920857-7edc5e808fd3
+lash-brow-lift.webp  https://images.unsplash.com/photo-1564278692313-b2d65996fc93
+extension-cils.webp  https://images.unsplash.com/photo-1589710751893-f9a6770ad71b
+onglerie-gel-capsule.webp  https://images.unsplash.com/photo-1792679430323-e5a1c1f8f811
+nail-art-3d.webp  https://images.unsplash.com/photo-1604654894610-df63bc536371
+maquillage-jour-soiree.webp  https://images.unsplash.com/photo-1709477542149-f4e0e21d590b
+smokey-contouring.webp  https://images.unsplash.com/photo-1627687579653-1a7eacb78c82
+coiffure-homme-degrade.webp  https://images.unsplash.com/photo-1647140655214-e4a2d914971f
+bureautique-secretariat.webp  https://images.unsplash.com/photo-1602016736566-7ed6a58894bd
+comptabilite-finance.webp  https://images.unsplash.com/photo-1626266061368-46a8f578ddd6
+maintenance-informatique.webp  https://images.unsplash.com/photo-1785947058973-43d5e9c64ef7
+langue-francais.webp  https://images.unsplash.com/photo-1502602898657-3e91760cbb34
+langue-anglais.webp  https://images.unsplash.com/photo-1486299267070-83823f5448dd
+langue-allemand.webp  https://images.unsplash.com/photo-1587330979470-3595ac045ab0
+langue-italien.webp  https://images.unsplash.com/photo-1552832230-c0197dd311b5
+coaching.webp  https://images.unsplash.com/photo-1573497620053-ea5300f94f21
+startup-marketing.webp  https://images.unsplash.com/photo-1542744173-8e7e53415bb0
